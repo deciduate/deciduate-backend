@@ -2,11 +2,9 @@ from django.db import models
 
 # Create your models here.
 class Requirement(models.Model):
-    #major_id = models.ForeignKey(User.major, primary_key=True)
-
-    #student_no = models.ForeignKey(User.student_no, primary_key=True)
-    
-    #major_type = models.ForeignKey(User.major_type, primary_key=True)
+    #major_id = models.ForeignKey(Major.major_id)
+    student_no = models.IntegerField(default=0)
+    #major_type = models.ForeignKey(User.major_type)
     
 
     main_major = models.IntegerField(default=0)
@@ -33,4 +31,7 @@ class Requirement(models.Model):
     #     ('NL', 'Novice Low'),
     # ]
     opic = models.CharField(max_length=5) #choices=OPIc_grade ?
+    
+    # class Meta:
+    #     unique_together = ('major_id', 'student_no', 'major_type')
     
