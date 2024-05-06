@@ -4,8 +4,7 @@ from django.db import models
 class Requirement(models.Model):
     #major_id = models.ForeignKey(Major.major_id)
     student_no = models.IntegerField(default=0)
-    #major_type = models.ForeignKey(User.major_type)
-    
+    #major_type = models.CharField(max_length = 15)
 
     main_major = models.IntegerField(default=0)
     double_major = models.IntegerField(default=0)
