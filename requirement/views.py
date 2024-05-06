@@ -52,6 +52,21 @@ def show_requirements(request):
     return Response(serializer.data, status=status.HTTP_200_OK)
 =======
 from django.shortcuts import render
+from .models import Requirement
 
+<<<<<<< HEAD
 # Create your views here.
 >>>>>>> 8cd45e1 (Feat : requirement 모델 생성)
+=======
+def show_requirements(request):
+    if request.method == 'POST':
+        학번 = request.POST.get('학번')
+        전공 = request.POST.get('전공')
+        전공_유형 = request.POST.get('전공_유형')
+
+        requirements = Requirement.objects.filter(student_no=학번, major_id=전공, major_type=전공_유형)
+        
+        return render(request, 'requirements.html', {'requirements': requirements})
+    else:
+        return render(request, 'input_requirements.html')
+>>>>>>> 8c64215 ( Feature: requirement 모델 생성)

@@ -10,11 +10,9 @@ class Requirement(models.Model):
 
 # Create your models here.
 class Requirement(models.Model):
-    #major_id = models.ForeignKey(User.major, primary_key=True)
-
-    #student_no = models.ForeignKey(User.student_no, primary_key=True)
-    
-    #major_type = models.ForeignKey(User.major_type, primary_key=True)
+    #major_id = models.ForeignKey(Major.major_id)
+    student_no = models.IntegerField(default=0)
+    #major_type = models.ForeignKey(User.major_type)
     
 >>>>>>> 8cd45e1 (Feat : requirement 모델 생성)
 
@@ -47,9 +45,15 @@ class Requirement(models.Model):
     # ]
     opic = models.CharField(max_length=5) #choices=OPIc_grade ?
 <<<<<<< HEAD
+<<<<<<< HEAD
     
     class Meta:
          unique_together = ('major_id', 'student_no', 'major_type')
 =======
 >>>>>>> 8cd45e1 (Feat : requirement 모델 생성)
+=======
+    
+    # class Meta:
+    #     unique_together = ('major_id', 'student_no', 'major_type')
+>>>>>>> 8c64215 ( Feature: requirement 모델 생성)
     

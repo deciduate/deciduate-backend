@@ -8,6 +8,7 @@
     <h1>졸업 요건</h1>
     <ul>
         {% for requirement in requirements %}
+<<<<<<< HEAD
         <li>학번: {{ requirement.student_no }}</li>
         <li>전공: {{ requirement.major_id.name }}</li>
         <li>전공 유형: {{ requirement.major_type }}</li>
@@ -27,6 +28,11 @@
         <li>opic: {{ requirement.opic}}</li>
         <!-- 나머지 필드들도 위와 같은 방식으로 추가 -->
     {% endfor %}
+=======
+            <li>{{ requirement.학번 }}, {{ requirement.전공 }}, {{ requirement.전공_유형 }}</li>
+            <!-- 다른 필드들 출력 -->
+        {% endfor %}
+>>>>>>> 8c64215 ( Feature: requirement 모델 생성)
     </ul>
 </body>
 </html>
