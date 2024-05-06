@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>졸업 요건 입력</title>
+</head>
+<body>
+    <h1>졸업 요건 입력</h1>
+    <form method="post">
+        {% csrf_token %}
+        학번: <input type="text" name="학번"><br>
+        전공: <input type="text" name="전공"><br>
+        전공 유형: <input type="text" name="전공_유형"><br>
+        <input type="submit" value="조회">
+    </form>
+</body>
+</html>
