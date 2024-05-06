@@ -56,8 +56,6 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-<<<<<<< HEAD
-<<<<<<< HEAD
     'django.contrib.sites',
 
     "users",
@@ -75,12 +73,6 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
-=======
-    "users",
->>>>>>> 9c807d7 (Feat: User 모델 설계)
-=======
-    "requirement",
->>>>>>> 8cd45e1 (Feat : requirement 모델 생성)
 ]
 
 MIDDLEWARE = [
@@ -126,11 +118,6 @@ DATABASES = {
     }
 }
 
-<<<<<<< HEAD
-=======
-AUTH_USER_MODEL = 'users.MyUser'
-
->>>>>>> 9c807d7 (Feat: User 모델 설계)
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
