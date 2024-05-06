@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Requirement
 from .serializers import RequirementSerializer
@@ -49,3 +50,8 @@ def show_requirements(request):
 
     serializer = RequirementSerializer(requirements, many=True)
     return Response(serializer.data, status=status.HTTP_200_OK)
+=======
+from django.shortcuts import render
+
+# Create your views here.
+>>>>>>> 8cd45e1 (Feat : requirement 모델 생성)

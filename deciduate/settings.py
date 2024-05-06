@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 <<<<<<< HEAD
+<<<<<<< HEAD
     'django.contrib.sites',
 
     "users",
@@ -77,6 +78,9 @@ INSTALLED_APPS = [
 =======
     "users",
 >>>>>>> 9c807d7 (Feat: User 모델 설계)
+=======
+    "requirement",
+>>>>>>> 8cd45e1 (Feat : requirement 모델 생성)
 ]
 
 MIDDLEWARE = [
