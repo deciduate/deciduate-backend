@@ -10,7 +10,7 @@ class Subject(models.Model):
         MAJOR = 'M', _('전공')
         LIBERAL = 'L', _('교양')
 
-    area = models.CharField(verbose_name='개설영역', max_length=2, choices=AreaChoices)
+    area = models.CharField(verbose_name='개설영역', max_length=2, choices=AreaChoices.choices)
     grade = models.IntegerField(verbose_name='학년')
     code = models.CharField(verbose_name='학수번호', max_length=11)
     name = models.CharField(verbose_name='과목명', max_length=30)
@@ -49,7 +49,7 @@ class Grade(models.Model):
         YEAR_24 = 24, '24'
 
     
-    year = models.IntegerField(verbose_name='학년', choices=YearChoices)
+    year = models.IntegerField(verbose_name='학년', choices=YearChoices.choices)
     major_compulsory = models.ForeignKey(MajorCompulsory, verbose_name='전공 필수', on_delete=models.CASCADE, related_name='grades')
     liberal_compulsory = models.ForeignKey(LiberalCompulsory, verbose_name='교양 필수', on_delete=models.CASCADE, related_name='grades')
     
@@ -113,7 +113,7 @@ class MyUser(AbstractBaseUser,PermissionsMixin):
     email = models.EmailField(verbose_name='이메일', max_length=255, unique=True)    
     nickname = models.CharField(verbose_name='닉네임', max_length=20, unique=True)
     student_no = models.CharField(verbose_name='학번', max_length=10, unique=True, null=True)
-    major_type = models.IntegerField(verbose_name='전공유형', choices=TypeChoices, default=TypeChoices.TYPE1)
+    major_type = models.IntegerField(verbose_name='전공유형', choices=TypeChoices.choices, default=TypeChoices.TYPE1)
     transfer = models.BooleanField(verbose_name='편입생', blank=True, default=False)
     foreign = models.BooleanField(verbose_name='외국인전형', blank=True, default=False)
     main_major = models.ForeignKey(Major, verbose_name='본전공', on_delete=models.SET_NULL, related_name='users_main', null=True)
