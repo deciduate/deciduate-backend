@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "profiles",
     "users",
     "requirement",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [
