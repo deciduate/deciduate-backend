@@ -6,6 +6,7 @@ from users.models import *
 from rest_framework import status
 from rest_framework.generics import RetrieveUpdateAPIView
 
+# user 설정, 로그인시에만 가능한게 필요함
 class PostProfile(APIView):
     def post(self, request):
         serializer = ProfileSerializer(data=request.data)
@@ -77,6 +78,26 @@ class PutCredit(RetrieveUpdateAPIView):
         except Profile.DoesNotExist:
             return Response({'detail': '입력된 프로필이 없습니다.'}, status=status.HTTP_404_NOT_FOUND)
                 
+class PutSubject(RetrieveUpdateAPIView):
+    def get(self, request):
+        try:
+            subject = CompulsorySubject.objects.get()
+            serializer = SubjectSerializer(subject)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        except CompulsorySubject.DoesNotExist:
+            return Response({'detail': '선택된 과목이 없습니다.'}, status=status.HTTP_404_NOT_FOUND)
+        
+    def put(self, request):
+        try:
+            subject = CompulsorySubject.objects.get()
+            serializer = SubjectSerializer(subject, data=request.data, partial=True)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data, status=status.HTTP_200_OK)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        except CompulsorySubject.DoesNotExist:
+            return Response({'detail': '선택된 과목이 없습니다.'}, status=status.HTTP_404_NOT_FOUND)
+
 class PutExtra(RetrieveUpdateAPIView):
     def get(self, request):
         try:
