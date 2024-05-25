@@ -2,16 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>졸업 요건 입력</title>
+    <title>학생 정보 입력</title>
 </head>
 <body>
-    <h1>졸업 요건 입력</h1>
-    <form method="post">
+    <h1>학생 정보 입력</h1>
+    <form action="/show_requirements/" method="post">
         {% csrf_token %}
-        학번: <input type="text" name="학번"><br>
-        전공: <input type="text" name="전공"><br>
-        전공 유형: <input type="text" name="전공_유형"><br>
-        <input type="submit" value="조회">
+        학번: <input type="text" name="학번" placeholder="ex.24"><br>
+        전공:
+        <select name="전공">
+                <option value="42">전자공학과</option>
+                <option value="39">컴퓨터공학부</option>
+                <option value="40">컴퓨터전자시스템공학부</option>
+                <option value="34">통계학과</option>
+                <option value="33">수학과</option>
+                <option value="31">GBT학부</option>
+                <option value="1">철학과</option>
+        </select><br>
+        전공 유형 : 
+        <select name="전공_유형">
+            <option value="1">전공 + 이중전공</option>
+            <option value="2">전공 + 부전공</option>
+            <option value="3" selected>전공심화</option>
+            <option value="4">전공심화 + 부전공</option>
+        </select><br>
+        <input type="submit" value="제출">
     </form>
 </body>
 </html>
