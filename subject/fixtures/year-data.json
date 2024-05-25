@@ -1,0 +1,152 @@
+[
+    {
+        "model": "subject.ClassOf",
+        "fields": {
+          "year": 1
+        }
+    }, 
+    {
+        "model": "subject.ClassOf",
+        "fields": {
+          "year": 2
+        }
+    }, 
+    {
+        "model": "subject.ClassOf",
+        "fields": {
+          "year": 3
+        }
+    }, 
+    {
+        "model": "subject.ClassOf",
+        "fields": {
+          "year": 4
+        }
+    }, 
+    {
+        "model": "subject.ClassOf",
+        "fields": {
+          "year": 5
+        }
+    }, 
+    {
+        "model": "subject.ClassOf",
+        "fields": {
+          "year": 6
+        }
+    }, 
+    {
+        "model": "subject.ClassOf",
+        "fields": {
+          "year": 7
+        }
+    }, 
+    {
+        "model": "subject.ClassOf",
+        "fields": {
+          "year": 8
+        }
+    }, 
+    {
+        "model": "subject.ClassOf",
+        "fields": {
+          "year": 9
+        }
+    }, 
+    {
+        "model": "subject.ClassOf",
+        "fields": {
+          "year": 10
+        }
+    }, 
+    {
+        "model": "subject.ClassOf",
+        "fields": {
+          "year": 11
+        }
+    }, 
+    {
+        "model": "subject.ClassOf",
+        "fields": {
+          "year": 12
+        }
+    }, 
+    {
+        "model": "subject.ClassOf",
+        "fields": {
+          "year": 13
+        }
+    }, 
+    {
+        "model": "subject.ClassOf",
+        "fields": {
+          "year": 14
+        }
+    }, 
+    {
+        "model": "subject.ClassOf",
+        "fields": {
+          "year": 15
+        }
+    }, 
+    {
+        "model": "subject.ClassOf",
+        "fields": {
+          "year": 16
+        }
+    }, 
+    {
+        "model": "subject.ClassOf",
+        "fields": {
+          "year": 17
+        }
+    }, 
+    {
+        "model": "subject.ClassOf",
+        "fields": {
+          "year": 18
+        }
+    }, 
+    {
+        "model": "subject.ClassOf",
+        "fields": {
+          "year": 19
+        }
+    }, 
+    {
+        "model": "subject.ClassOf",
+        "fields": {
+          "year": 20
+        }
+    }, 
+    {
+        "model": "subject.ClassOf",
+        "fields": {
+          "year": 21
+        }
+    }, 
+    {
+        "model": "subject.ClassOf",
+        "fields": {
+          "year": 22
+        }
+    }, 
+    {
+        "model": "subject.ClassOf",
+        "fields": {
+          "year": 23
+        }
+    }, 
+    {
+        "model": "subject.ClassOf",
+        "fields": {
+          "year": 24
+        }
+    }, 
+    {
+      "model": "subject.ClassOf",
+      "fields": {
+        "year": 25
+      }
+    }
+]

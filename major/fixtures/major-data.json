@@ -1,6 +1,6 @@
 [
     {
-        "model": "users.major",
+        "model": "major.Major",
         "fields": {
           "name": "철학과",
           "campus": "G",
@@ -8,7 +8,7 @@
         }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "사학과",
         "campus": "G",
@@ -16,7 +16,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "언어인과학과",
         "campus": "G",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "지식콘텐츠학부",
         "campus": "G",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "영어통번역학과",
         "campus": "G",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "독일어통번역학과",
         "campus": "G",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "스페인어통번역학과",
         "campus": "G",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "이탈리어통번역학과",
         "campus": "G",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "중국어통번역학과",
         "campus": "G",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "일본어통번역학",
         "campus": "G",
@@ -80,7 +80,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "아랍어통번역학",
         "campus": "G",
@@ -88,7 +88,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "말레이·인도네시아어통번역학과",
         "campus": "G",
@@ -96,7 +96,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "태국어통번역학과",
         "campus": "G",
@@ -105,7 +105,7 @@
     },
 
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "폴란드어과",
         "campus": "G",
@@ -113,7 +113,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "루마니아어과",
         "campus": "G",
@@ -121,7 +121,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "체코·슬로바키아어과",
         "campus": "G",
@@ -129,7 +129,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "헝가리어과",
         "campus": "G",
@@ -137,7 +137,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "세르비아·크로아티아어과",
         "campus": "G",
@@ -145,7 +145,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "우크라이나어과",
         "campus": "G",
@@ -153,7 +153,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "프랑스학과",
         "campus": "G",
@@ -161,7 +161,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "브라질학과",
         "campus": "G",
@@ -169,7 +169,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "그리스·불가리아학과",
         "campus": "G",
@@ -177,7 +177,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "인도학과",
         "campus": "G",
@@ -185,7 +185,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "중앙아시아학과",
         "campus": "G",
@@ -193,7 +193,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "아프리카학부",
         "campus": "G",
@@ -201,7 +201,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "러시아학과",
         "campus": "G",
@@ -209,7 +209,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "한국학과",
         "campus": "G",
@@ -217,7 +217,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "국제경영학과",
         "campus": "G",
@@ -225,7 +225,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "경제학과",
         "campus": "G",
@@ -233,7 +233,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "경영정보학과",
         "campus": "G",
@@ -241,7 +241,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "Global Business&Technology학부",
         "campus": "G",
@@ -249,7 +249,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "국제금융학과",
         "campus": "G",
@@ -257,7 +257,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "수학과",
         "campus": "G",
@@ -265,7 +265,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "통계학과",
         "campus": "G",
@@ -273,7 +273,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "전자물리학과",
         "campus": "G",
@@ -281,7 +281,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "환경학과",
         "campus": "G",
@@ -289,7 +289,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "생명공학과",
         "campus": "G",
@@ -297,7 +297,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "화학과",
         "campus": "G",
@@ -305,7 +305,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "컴퓨터공학부",
         "campus": "G",
@@ -313,7 +313,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "컴퓨터·전자시스템공학부",
         "campus": "G",
@@ -321,7 +321,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "정보통신공학과",
         "campus": "G",
@@ -329,7 +329,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "반도체전자공학부(반도체공학전공)",
         "campus": "G",
@@ -337,7 +337,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "반도체전자공학부(전자공학전공)",
         "campus": "G",
@@ -345,7 +345,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "산업경영공학과",
         "campus": "G",
@@ -353,7 +353,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "융합인재학부",
         "campus": "G",
@@ -361,7 +361,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "디지털콘텐츠학부",
         "campus": "G",
@@ -369,7 +369,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "투어리즘&웰니스학부",
         "campus": "G",
@@ -377,7 +377,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "글로벌스포츠산업학부",
         "campus": "G",
@@ -385,7 +385,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "AI데이터융합학부",
         "campus": "G",
@@ -393,7 +393,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "Finance&AI융합학부",
         "campus": "G",
@@ -401,7 +401,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "바이오메디컬공학부",
         "campus": "G",
@@ -409,7 +409,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "글로벌자유전공학부",
         "campus": "G",
@@ -418,7 +418,7 @@
     },
 
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "기후변화융합학부",
         "campus": "G",
@@ -426,7 +426,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "ELLT학과",
         "campus": "S",
@@ -434,7 +434,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "영미문학·문화학과",
         "campus": "S",
@@ -442,7 +442,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "EICC학과",
         "campus": "S",
@@ -450,7 +450,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "영어학부",
         "campus": "S",
@@ -458,7 +458,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "프랑스어학부",
         "campus": "S",
@@ -466,7 +466,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "독일어과",
         "campus": "S",
@@ -474,7 +474,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "노어과",
         "campus": "S",
@@ -482,7 +482,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "스페인어과",
         "campus": "S",
@@ -490,7 +490,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "이탈리아어과",
         "campus": "S",
@@ -498,7 +498,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "포르투갈어과",
         "campus": "S",
@@ -506,7 +506,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "네덜란드어과",
         "campus": "S",
@@ -514,7 +514,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "스칸디나비아어과",
         "campus": "S",
@@ -522,7 +522,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "말레이·인도네시아어과",
         "campus": "S",
@@ -530,7 +530,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "아랍어과",
         "campus": "S",
@@ -538,7 +538,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "태국어과",
         "campus": "S",
@@ -546,7 +546,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "베트남어과",
         "campus": "S",
@@ -554,7 +554,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "인도어과",
         "campus": "S",
@@ -562,7 +562,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "터키·아제르바이잔어과",
         "campus": "S",
@@ -570,7 +570,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "페르시아어·이란학과",
         "campus": "S",
@@ -578,7 +578,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "몽골어과",
         "campus": "S",
@@ -586,7 +586,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "중국언어문화학부",
         "campus": "S",
@@ -594,7 +594,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "중국외교통상학부",
         "campus": "S",
@@ -602,7 +602,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "일본언어문화학부",
         "campus": "S",
@@ -610,7 +610,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "융합일본지역학부",
         "campus": "S",
@@ -618,7 +618,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "정치외교학과",
         "campus": "S",
@@ -626,7 +626,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "행정학과",
         "campus": "S",
@@ -634,7 +634,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "미디어커뮤니케이션학부",
         "campus": "S",
@@ -642,7 +642,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "국제통상학과",
         "campus": "S",
@@ -650,7 +650,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "경제학부",
         "campus": "S",
@@ -658,7 +658,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "경영학부",
         "campus": "S",
@@ -666,7 +666,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "영어교육과",
         "campus": "S",
@@ -674,7 +674,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "한국어교육과",
         "campus": "S",
@@ -682,7 +682,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "외국어교육학부(프랑스어교육전공)",
         "campus": "S",
@@ -690,7 +690,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "외국어교육학부(독일어교육전공)",
         "campus": "S",
@@ -698,7 +698,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "외국어교육학부(중국어교육전공)",
         "campus": "S",
@@ -706,7 +706,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "교육학전공",
         "campus": "S",
@@ -714,7 +714,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "체육학전공",
         "campus": "S",
@@ -722,7 +722,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "Language&AI 융합학부",
         "campus": "S",
@@ -730,7 +730,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "Social Science&AI 융합학부",
         "campus": "S",
@@ -738,7 +738,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "국제학부",
         "campus": "S",
@@ -746,7 +746,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "Language&Diplomacy학부",
         "campus": "S",
@@ -754,7 +754,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "Language&Trade학부",
         "campus": "S",
@@ -762,7 +762,7 @@
       }
     },
     {
-      "model": "users.major",
+      "model": "major.Major",
       "fields": {
         "name": "KFL학부",
         "campus": "S",
