@@ -6,7 +6,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "24",
-          "major_type":1,
+          "major_type":2,
           "main_major": "45",
           "double_major": "42",
           "minor_major": "0",
@@ -28,7 +28,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "23",
-          "major_type":1,
+          "major_type":2,
           "main_major": "45",
           "double_major": "42",
           "minor_major": "0",
@@ -50,7 +50,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "24",
-          "major_type":2,
+          "major_type":3,
           "main_major": "54",
           "double_major": "0",
           "minor_major": "21",
@@ -72,7 +72,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "23",
-          "major_type":2,
+          "major_type":3,
           "main_major": "54",
           "double_major": "0",
           "minor_major": "21",
@@ -94,7 +94,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "24",
-          "major_type":3,
+          "major_type":1,
           "main_major": "63",
           "double_major": "0",
           "minor_major": "0",
@@ -116,7 +116,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "23",
-          "major_type":3,
+          "major_type":1,
           "main_major": "63",
           "double_major": "0",
           "minor_major": "0",
@@ -182,7 +182,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "22",
-          "major_type":1,
+          "major_type":2,
           "main_major": "57",
           "double_major": "42",
           "minor_major": "0",
@@ -204,7 +204,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "21",
-          "major_type":1,
+          "major_type":2,
           "main_major": "57",
           "double_major": "42",
           "minor_major": "0",
@@ -226,7 +226,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "20",
-          "major_type":1,
+          "major_type":2,
           "main_major": "57",
           "double_major": "42",
           "minor_major": "0",
@@ -248,7 +248,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "19",
-          "major_type":1,
+          "major_type":2,
           "main_major": "57",
           "double_major": "42",
           "minor_major": "0",
@@ -270,7 +270,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "22",
-          "major_type":2,
+          "major_type":3,
           "main_major": "66",
           "double_major": "0",
           "minor_major": "21",
@@ -292,7 +292,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "21",
-          "major_type":2,
+          "major_type":3,
           "main_major": "66",
           "double_major": "0",
           "minor_major": "21",
@@ -314,7 +314,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "20",
-          "major_type":2,
+          "major_type":3,
           "main_major": "66",
           "double_major": "0",
           "minor_major": "21",
@@ -336,7 +336,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "19",
-          "major_type":2,
+          "major_type":3,
           "main_major": "66",
           "double_major": "0",
           "minor_major": "21",
@@ -358,7 +358,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "22",
-          "major_type":3,
+          "major_type":1,
           "main_major": "75",
           "double_major": "0",
           "minor_major": "0",
@@ -380,7 +380,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "21",
-          "major_type":3,
+          "major_type":1,
           "main_major": "75",
           "double_major": "0",
           "minor_major": "0",
@@ -402,7 +402,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "20",
-          "major_type":3,
+          "major_type":1,
           "main_major": "75",
           "double_major": "0",
           "minor_major": "0",
@@ -424,7 +424,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "19",
-          "major_type":3,
+          "major_type":1,
           "main_major": "75",
           "double_major": "0",
           "minor_major": "0",
@@ -534,7 +534,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "18",
-          "major_type":1,
+          "major_type":2,
           "main_major": "54",
           "double_major": "42",
           "minor_major": "0",
@@ -556,7 +556,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "17",
-          "major_type":1,
+          "major_type":2,
           "main_major": "54",
           "double_major": "42",
           "minor_major": "0",
@@ -578,7 +578,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "16",
-          "major_type":1,
+          "major_type":2,
           "main_major": "54",
           "double_major": "42",
           "minor_major": "0",
@@ -600,7 +600,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "15",
-          "major_type":1,
+          "major_type":2,
           "main_major": "54",
           "double_major": "42",
           "minor_major": "0",
@@ -622,7 +622,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "18",
-          "major_type":2,
+          "major_type":3,
           "main_major": "54",
           "double_major": "0",
           "minor_major": "21",
@@ -644,7 +644,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "17",
-          "major_type":2,
+          "major_type":3,
           "main_major": "54",
           "double_major": "0",
           "minor_major": "21",
@@ -666,7 +666,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "16",
-          "major_type":2,
+          "major_type":3,
           "main_major": "54",
           "double_major": "0",
           "minor_major": "21",
@@ -688,7 +688,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "15",
-          "major_type":2,
+          "major_type":3,
           "main_major": "54",
           "double_major": "0",
           "minor_major": "21",
@@ -710,7 +710,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "18",
-          "major_type":3,
+          "major_type":1,
           "main_major": "75",
           "double_major": "0",
           "minor_major": "0",
@@ -732,7 +732,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "17",
-          "major_type":3,
+          "major_type":1,
           "main_major": "75",
           "double_major": "0",
           "minor_major": "0",
@@ -754,7 +754,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "16",
-          "major_type":3,
+          "major_type":1,
           "main_major": "75",
           "double_major": "0",
           "minor_major": "0",
@@ -776,7 +776,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "15",
-          "major_type":3,
+          "major_type":1,
           "main_major": "75",
           "double_major": "0",
           "minor_major": "0",
@@ -886,7 +886,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "14",
-          "major_type":1,
+          "major_type":2,
           "main_major": "54",
           "double_major": "54",
           "minor_major": "0",
@@ -908,7 +908,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "13",
-          "major_type":1,
+          "major_type":2,
           "main_major": "54",
           "double_major": "54",
           "minor_major": "0",
@@ -930,7 +930,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "12",
-          "major_type":1,
+          "major_type":2,
           "main_major": "54",
           "double_major": "54",
           "minor_major": "0",
@@ -952,7 +952,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "11",
-          "major_type":1,
+          "major_type":2,
           "main_major": "54",
           "double_major": "54",
           "minor_major": "0",
@@ -974,7 +974,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "10",
-          "major_type":1,
+          "major_type":2,
           "main_major": "54",
           "double_major": "54",
           "minor_major": "0",
@@ -996,7 +996,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "9",
-          "major_type":1,
+          "major_type":2,
           "main_major": "54",
           "double_major": "54",
           "minor_major": "0",
@@ -1018,7 +1018,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "8",
-          "major_type":1,
+          "major_type":2,
           "main_major": "54",
           "double_major": "54",
           "minor_major": "0",
@@ -1040,7 +1040,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "7",
-          "major_type":1,
+          "major_type":2,
           "main_major": "54",
           "double_major": "54",
           "minor_major": "0",
@@ -1062,7 +1062,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "14",
-          "major_type":2,
+          "major_type":3,
           "main_major": "54",
           "double_major": "0",
           "minor_major": "21",
@@ -1084,7 +1084,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "13",
-          "major_type":2,
+          "major_type":3,
           "main_major": "54",
           "double_major": "0",
           "minor_major": "21",
@@ -1106,7 +1106,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "12",
-          "major_type":2,
+          "major_type":3,
           "main_major": "54",
           "double_major": "0",
           "minor_major": "21",
@@ -1128,7 +1128,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "11",
-          "major_type":2,
+          "major_type":3,
           "main_major": "54",
           "double_major": "0",
           "minor_major": "21",
@@ -1150,7 +1150,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "10",
-          "major_type":2,
+          "major_type":3,
           "main_major": "54",
           "double_major": "0",
           "minor_major": "21",
@@ -1172,7 +1172,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "9",
-          "major_type":2,
+          "major_type":3,
           "main_major": "54",
           "double_major": "0",
           "minor_major": "21",
@@ -1194,7 +1194,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "8",
-          "major_type":2,
+          "major_type":3,
           "main_major": "54",
           "double_major": "0",
           "minor_major": "21",
@@ -1216,7 +1216,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "7",
-          "major_type":2,
+          "major_type":3,
           "main_major": "54",
           "double_major": "0",
           "minor_major": "21",
@@ -1238,7 +1238,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "14",
-          "major_type":3,
+          "major_type":1,
           "main_major": "75",
           "double_major": "0",
           "minor_major": "0",
@@ -1260,7 +1260,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "13",
-          "major_type":3,
+          "major_type":1,
           "main_major": "75",
           "double_major": "0",
           "minor_major": "0",
@@ -1282,7 +1282,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "12",
-          "major_type":3,
+          "major_type":1,
           "main_major": "75",
           "double_major": "0",
           "minor_major": "0",
@@ -1304,7 +1304,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "11",
-          "major_type":3,
+          "major_type":1,
           "main_major": "75",
           "double_major": "0",
           "minor_major": "0",
@@ -1326,7 +1326,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "10",
-          "major_type":3,
+          "major_type":1,
           "main_major": "75",
           "double_major": "0",
           "minor_major": "0",
@@ -1348,7 +1348,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "9",
-          "major_type":3,
+          "major_type":1,
           "main_major": "75",
           "double_major": "0",
           "minor_major": "0",
@@ -1370,7 +1370,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "8",
-          "major_type":3,
+          "major_type":1,
           "main_major": "75",
           "double_major": "0",
           "minor_major": "0",
@@ -1392,7 +1392,7 @@
         "fields": {
           "major_id": 43,
           "student_no": "7",
-          "major_type":3,
+          "major_type":1,
           "main_major": "75",
           "double_major": "0",
           "minor_major": "0",
