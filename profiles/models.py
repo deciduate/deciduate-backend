@@ -30,7 +30,8 @@ class Profile(models.Model):
         TYPE8 = 8, _('OPIc')
         TYPE9 = 9, _('외국어인증대체과정')
 
-    foreign_pass = models.IntegerField(choices = ForeignPass.choices, default = ForeignPass.NONE)
+    foreign_pass = models.IntegerField(choices = ForeignPass.choices, null=True)
+
 
 class Basic(models.Model):
     class TypeChoices(models.IntegerChoices):
