@@ -11,3 +11,8 @@ class RequirementSerializer(serializers.ModelSerializer):
 
     def get_major_name(self, obj):
         return obj.major_id.name
+    
+class CompleteRequirementSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Requirement
+        fields = ['test_type', 'flex', 'flex_speaking', 'toeic', 'toeic_speaking', 'opic']
