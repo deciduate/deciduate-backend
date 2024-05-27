@@ -2,7 +2,7 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 from major.models import Major
 from users.models import MyUser
-
+from subject.models import MajorCompulsory, LiberalCompulsory
 
 class Basic(models.Model):
     class TypeChoices(models.IntegerChoices):
