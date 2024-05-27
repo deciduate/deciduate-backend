@@ -4,7 +4,7 @@ from .serializers import RequirementSerializer
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from users.models import Major
+from major.models import Major
 
 
 # 기존 장고 방식

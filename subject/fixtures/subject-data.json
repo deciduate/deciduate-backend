@@ -1,0 +1,410 @@
+[
+    {
+        "model": "subject.Subject",
+        "pk": 1,
+        "fields": {
+          "area": "L",
+          "grade": 1,
+          "name": "미네르바인문(1)",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 2,
+        "fields": {
+          "area": "L",
+          "grade": 1,
+          "name": "미네르바인문(2)",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 3,
+        "fields": {
+          "area": "L",
+          "grade": 1,
+          "name": "대학외국어1",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 4,
+        "fields": {
+          "area": "L",
+          "grade": 1,
+          "name": "대학외국어2",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 5,
+        "fields": {
+          "area": "L",
+          "grade": 1,
+          "name": "소프트웨어기초",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 6,
+        "fields": {
+          "area": "L",
+          "grade": 1,
+          "name": "RC영어 6학점",
+          "credit": 2
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 7,
+        "fields": {
+          "area": "L",
+          "name": "College English(L/S)",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 8,
+        "fields": {
+          "area": "L",
+          "name": "College English(R/W)",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 9,
+        "fields": {
+          "area": "L",
+          "grade": 1,
+          "name": "신입생세미나",
+          "credit": 1
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 10,
+        "fields": {
+          "area": "L",
+          "grade": 1,
+          "name": "HUFS Career",
+          "credit": 1
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 11,
+        "fields": {
+          "area": "L",
+          "grade": 1,
+          "name": "핵심인문기초",
+          "credit": 2
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 12,
+        "fields": {
+          "area": "M",
+          "grade": 2,
+          "name": "전기회로",
+          "credit": 3
+        }
+    }, 
+    {
+      "model": "subject.Subject",
+      "pk": 13,
+      "fields": {
+        "area": "M",
+        "grade": 4,
+        "name": "전자공학종합설계프로젝트",
+        "credit": 3
+      }
+    }, 
+    {
+        "model": "subject.Subject",
+        "pk": 14,
+        "fields": {
+          "area": "M",
+          "grade": 1,
+          "name": "통계학및연습1",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 15,
+        "fields": {
+          "area": "M",
+          "grade": 1,
+          "name": "통계학및연습2",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 16,
+        "fields": {
+          "area": "M",
+          "grade": 1,
+          "name": "통계학의활용및실습",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 17,
+        "fields": {
+          "area": "M",
+          "grade": 1,
+          "name": "통계학개론",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 18,
+        "fields": {
+          "area": "M",
+          "grade": 2,
+          "name": "통계행렬론",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 19,
+        "fields": {
+          "area": "M",
+          "grade": 2,
+          "name": "확률분포론",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 20,
+        "fields": {
+          "area": "M",
+          "grade": 2,
+          "name": "회귀분석",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 21,
+        "fields": {
+          "area": "M",
+          "grade": 3,
+          "name": "수리통계학",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 22,
+        "fields": {
+          "area": "M",
+          "grade": 1,
+          "name": "미적분학및연습1",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 23,
+        "fields": {
+          "area": "M",
+          "grade": 1,
+          "name": "미적분학및연습2",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 24,
+        "fields": {
+          "area": "M",
+          "grade": 2,
+          "name": "해석학개론1",
+          "credit": 4
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 25,
+        "fields": {
+          "area": "M",
+          "grade": 2,
+          "name": "해석학개론2",
+          "credit": 4
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 26,
+        "fields": {
+          "area": "M",
+          "grade": 2,
+          "name": "선형대수학및연습1",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 27,
+        "fields": {
+          "area": "M",
+          "grade": 2,
+          "name": "선형대수학및연습2",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 28,
+        "fields": {
+          "area": "M",
+          "grade": 1,
+          "name": "경영학원론",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 29,
+        "fields": {
+          "area": "M",
+          "grade": 1,
+          "name": "회계원리",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 30,
+        "fields": {
+          "area": "M",
+          "grade": 1,
+          "name": "컴퓨터프로그래밍",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 31,
+        "fields": {
+          "area": "M",
+          "grade": 4,
+          "name": "졸업프로젝트실습(캡스톤디자인)",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 32,
+        "fields": {
+          "area": "M",
+          "grade": 1,
+          "name": "논리학",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 33,
+        "fields": {
+          "area": "M",
+          "grade": 1,
+          "name": "서양고.중세철학사",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 34,
+        "fields": {
+          "area": "M",
+          "grade": 1,
+          "name": "중국고.중세철학사",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 35,
+        "fields": {
+          "area": "M",
+          "grade": 1,
+          "name": "철학입문",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 36,
+        "fields": {
+          "area": "M",
+          "grade": 1,
+          "name": "(사학과) 한국사입문/동아시아현대사/서양생활문화사",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 37,
+        "fields": {
+          "area": "M",
+          "grade": 1,
+          "name": "(언어인지과학과) 언어와인간/세계의언어와문자",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 38,
+        "fields": {
+          "area": "M",
+          "grade": 1,
+          "name": "컴퓨터프로그래밍및실습",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 39,
+        "fields": {
+          "area": "M",
+          "grade": 2,
+          "name": "자료구조",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 40,
+        "fields": {
+          "area": "M",
+          "grade": 4,
+          "name": "캡스톤설계및실습",
+          "credit": 3
+        }
+      }, 
+      {
+        "model": "subject.Subject",
+        "pk": 41,
+        "fields": {
+          "area": "M",
+          "grade": 1,
+          "name": "컴퓨터개론및실습",
+          "credit": 3
+        }
+      }
+]
