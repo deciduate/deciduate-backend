@@ -2,6 +2,7 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 from major.models import Major
+from users.models import MyUser
 
 # 프로필
 class Profile(models.Model):
@@ -48,7 +49,7 @@ class Basic(models.Model):
     main_major = models.ForeignKey(Major, verbose_name='본전공', related_name='users_main', on_delete=models.SET_NULL, null=True)
     double_major = models.ForeignKey(Major, verbose_name='이중전공', related_name='users_double', on_delete=models.SET_NULL, null=True)
     minor_major = models.ForeignKey(Major, verbose_name='부전공', related_name='users_minor', on_delete=models.SET_NULL, null=True)
-
+    user_id = models.ForeignKey(MyUser, verbose_name='사용자', related_name='users_id', on_delete=models.CASCADE)
 
 class CompulsorySubject(models.Model):
     status = models.BooleanField(default=False)
