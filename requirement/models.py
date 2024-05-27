@@ -1,5 +1,5 @@
 from django.db import models
-from users.models import Major
+from major.models import Major
 
 class Requirement(models.Model):
     major_id = models.ForeignKey(Major, null=True, on_delete=models.SET_NULL)

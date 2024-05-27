@@ -8,8 +8,8 @@ class UserAdmin(admin.ModelAdmin):
 
     list_display = (
         'email',
-        'nickname',
         'created_at',
+        'updated_at',
     )
 
     list_display_links = (
