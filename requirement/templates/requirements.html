@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>졸업 요건</title>
+</head>
+<body>
+    <h1>졸업 요건</h1>
+    <ul>
+        {% for requirement in requirements %}
+        <li>학번: {{ requirement.student_no }}</li>
+        <li>전공: {{ requirement.major_id.name }}</li>
+        <li>전공 유형: {{ requirement.major_type }}</li>
+        <!-- 이하 필드를 추가로 나열 -->
+        <li>Main Major: {{ requirement.main_major }}</li>
+        <li>Double Major: {{ requirement.double_major }}</li>
+        <li>Minor Major: {{ requirement.minor_major }}</li>
+        <li>liberal: {{ requirement.liberal }}</li>
+        <li>practical_foreign: {{ requirement.practical_foreign }}</li>
+        <li>self_selection: {{ requirement.self_selection }}</li>
+        <li>total_credit: {{ requirement.total_credit }}</li>
+        <li>test_type: {{ requirement.test_type }}</li>
+        <li>flex: {{ requirement.flex }}</li>
+        <li>flex_speaking: {{ requirement.flex_speaking }}</li>
+        <li>toeic: {{ requirement.toeic }}</li>
+        <li>toeic_speaking: {{ requirement.toeic_speaking }}</li>
+        <li>opic: {{ requirement.opic}}</li>
+        <!-- 나머지 필드들도 위와 같은 방식으로 추가 -->
+    {% endfor %}
+    </ul>
+</body>
+</html>
