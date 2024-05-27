@@ -8,11 +8,11 @@ from users.models import Major, MajorCompulsory, LiberalCompulsory, Grade
 
 
 
-@api_view(['POST'])
+@api_view(['GET'])
 def show_requirements(request):
-    student_no = request.data.get('학번', '')
-    major_name = request.data.get('전공', '')
-    major_type = request.data.get('전공_유형', '')
+    student_no = request.query_params.get('학번', '')
+    major_name = request.query_params.get('전공', '')
+    major_type = request.query_params.get('전공_유형', '')
 
     print("요청된 조건 값들:", student_no, major_name, major_type)
 
