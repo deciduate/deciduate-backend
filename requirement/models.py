@@ -1,7 +1,6 @@
 from django.db import models
-from users.models import *
+from major.models import Major
 
-# Create your models here.
 class Requirement(models.Model):
     major_id = models.ForeignKey(Major, null=True, on_delete=models.SET_NULL)
     student_no = models.CharField(max_length=2)
@@ -33,6 +32,6 @@ class Requirement(models.Model):
     # ]
     opic = models.CharField(max_length=5) #choices=OPIc_grade ?
     
-    # class Meta:
-    #     unique_together = ('major_id', 'student_no', 'major_type')
+    class Meta:
+         unique_together = ('major_id', 'student_no', 'major_type')
     

@@ -1,6 +1,8 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-from users.models import *
+from major.models import Major
+from users.models import MyUser
+
 
 class Basic(models.Model):
     class TypeChoices(models.IntegerChoices):
@@ -61,3 +63,4 @@ class Extra(models.Model):
 
     foreign_pass = models.IntegerField(choices = ForeignPass.choices, null=True)
     user_id = models.ForeignKey(MyUser, on_delete=models.CASCADE, null=True)
+

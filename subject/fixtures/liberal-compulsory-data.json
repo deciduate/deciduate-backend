@@ -1,0 +1,662 @@
+[
+    {
+        "_comment": "미네르바인문(1)/18",
+        "pk": 1,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 1,
+            "category": "미네르바인문", 
+            "compulsory": true,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "미네르바인문(1)/19",
+        "pk": 2,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 1,
+            "category": "미네르바인문", 
+            "compulsory": true,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "미네르바인문(1)/20",
+        "pk": 3,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 1,
+            "category": "미네르바인문", 
+            "compulsory": true,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "미네르바인문(1)/21",
+        "pk": 4,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 1,
+            "category": "미네르바인문", 
+            "compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "미네르바인문(1)/22",
+        "pk": 5,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 1,
+            "category": "미네르바인문", 
+            "compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "미네르바인문(1)/23",
+        "pk": 6,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 1,
+            "category": "미네르바인문", 
+            "compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "미네르바인문(1)/24",
+        "pk": 7,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 1,
+            "category": "미네르바인문", 
+            "compulsory": true,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "미네르바인문(2)/18",
+        "pk": 8,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 2,
+            "category": "미네르바인문", 
+            "compulsory": true,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "미네르바인문(2)/19",
+        "pk": 9,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 2,
+            "category": "미네르바인문", 
+            "compulsory": true,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "미네르바인문(2)/20",
+        "pk": 10,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 2,
+            "category": "미네르바인문", 
+            "compulsory": true,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "미네르바인문(2)/21",
+        "pk": 11,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 2,
+            "category": "미네르바인문", 
+            "compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "미네르바인문(2)/22",
+        "pk": 12,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 2,
+            "category": "미네르바인문", 
+            "compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "미네르바인문(2)/23",
+        "pk": 13,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 2,
+            "category": "미네르바인문", 
+            "compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "미네르바인문(2)/24",
+        "pk": 14,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 2,
+            "category": "미네르바인문", 
+            "compulsory": true,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "대학외국어1/18",
+        "pk": 15,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 3,
+            "category": "대학외국어", 
+            "compulsory": true,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "대학외국어1/19",
+        "pk": 16,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 3,
+            "category": "대학외국어", 
+            "compulsory": true,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "대학외국어1/20",
+        "pk": 17,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 3,
+            "category": "대학외국어", 
+            "compulsory": true,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "대학외국어1/21",
+        "pk": 18,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 3,
+            "category": "대학외국어", 
+            "compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "대학외국어1/22",
+        "pk": 19,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 3,
+            "category": "대학외국어", 
+            "compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "대학외국어1/23",
+        "pk": 20,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 3,
+            "category": "대학외국어", 
+            "compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "대학외국어1/24",
+        "pk": 21,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 3,
+            "category": "대학외국어", 
+            "compulsory": true,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "대학외국어2/18",
+        "pk": 22,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 4,
+            "category": "대학외국어", 
+            "compulsory": true,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "대학외국어2/19",
+        "pk": 23,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 4,
+            "category": "대학외국어", 
+            "compulsory": true,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "대학외국어2/20",
+        "pk": 24,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 4,
+            "category": "대학외국어", 
+            "compulsory": true,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "대학외국어2/21",
+        "pk": 25,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 4,
+            "category": "대학외국어", 
+            "compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "대학외국어2/22",
+        "pk": 26,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 4,
+            "category": "대학외국어", 
+            "compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "대학외국어2/23",
+        "pk": 27,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 4,
+            "category": "대학외국어", 
+            "compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "대학외국어2/24",
+        "pk": 28,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 4,
+            "category": "대학외국어", 
+            "compulsory": true,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "소프트웨어기초/18",
+        "pk": 29,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 5,
+            "category": "소프트웨어기초", 
+            "compulsory": false,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "소프트웨어기초/19",
+        "pk": 30,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 5,
+            "category": "소프트웨어기초", 
+            "compulsory": false,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "소프트웨어기초/20",
+        "pk": 31,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 5,
+            "category": "소프트웨어기초", 
+            "compulsory": true,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "소프트웨어기초/21",
+        "pk": 32,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 5,
+            "category": "소프트웨어기초", 
+            "compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "소프트웨어기초/22",
+        "pk": 33,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 5,
+            "category": "소프트웨어기초", 
+            "compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "소프트웨어기초/23",
+        "pk": 34,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 5,
+            "category": "소프트웨어기초", 
+            "compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "소프트웨어기초/24",
+        "pk": 35,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 5,
+            "category": "소프트웨어기초", 
+            "compulsory": true,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "RC영어 6학점/21",
+        "pk": 36,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 6,
+            "category": "RC영어", 
+            "compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "RC영어 6학점/22",
+        "pk": 37,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 6,
+            "category": "RC영어", 
+            "compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "RC영어 6학점/23",
+        "pk": 38,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 6,
+            "category": "RC영어", 
+            "compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "RC영어 6학점/24",
+        "pk": 39,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 6,
+            "category": "RC영어", 
+            "compulsory": true,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "신입생세미나/18",
+        "pk": 40,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 9,
+            "category": "신입생세미나", 
+            "compulsory": true,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "신입생세미나/19",
+        "pk": 41,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 9,
+            "category": "신입생세미나", 
+            "compulsory": true,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "신입생세미나/20",
+        "pk": 42,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 9,
+            "category": "신입생세미나", 
+            "compulsory": true,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "신입생세미나/21",
+        "pk": 43,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 9,
+            "category": "신입생세미나", 
+            "compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "신입생세미나/22",
+        "pk": 44,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 9,
+            "category": "신입생세미나", 
+            "compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "신입생세미나/23",
+        "pk": 45,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 9,
+            "category": "신입생세미나", 
+            "compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "신입생세미나/24",
+        "pk": 46,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 9,
+            "category": "신입생세미나", 
+            "compulsory": true,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "HUFS Career/18",
+        "pk": 47,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 10,
+            "category": "HUFS CAREER", 
+            "compulsory": true,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "HUFS Career/19",
+        "pk": 48,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 10,
+            "category": "HUFS CAREER", 
+            "compulsory": true,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "HUFS Career/20",
+        "pk": 49,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 10,
+            "category": "HUFS CAREER", 
+            "compulsory": true,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "HUFS Career/21",
+        "pk": 50,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 10,
+            "category": "HUFS CAREER", 
+            "compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "HUFS Career/22",
+        "pk": 51,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 10,
+            "category": "HUFS CAREER", 
+            "compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "HUFS Career/23",
+        "pk": 52,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 10,
+            "category": "HUFS CAREER", 
+            "compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "HUFS Career/24",
+        "pk": 53,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 10,
+            "category": "HUFS CAREER", 
+            "compulsory": true,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "핵심인문기초/18",
+        "pk": 54,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 11,
+            "category": "핵심인문기초", 
+            "compulsory": true,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "핵심인문기초/19",
+        "pk": 55,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 11,
+            "category": "핵심인문기초", 
+            "compulsory": true,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "핵심인문기초/20",
+        "pk": 56,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 11,
+            "category": "핵심인문기초", 
+            "compulsory": true,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "핵심인문기초/21",
+        "pk": 57,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 11,
+            "category": "핵심인문기초", 
+            "compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "핵심인문기초/22",
+        "pk": 58,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 11,
+            "category": "핵심인문기초", 
+            "compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "핵심인문기초/23",
+        "pk": 59,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 11,
+            "category": "핵심인문기초", 
+            "compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "핵심인문기초/24",
+        "pk": 60,
+        "model": "subject.LiberalCompulsory",
+        "fields": {
+            "subject": 11,
+            "category": "핵심인문기초", 
+            "compulsory": true,
+            "class_of": 24
+        }
+    }
+]
