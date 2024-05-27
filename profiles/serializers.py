@@ -1,27 +1,39 @@
 from rest_framework import serializers
-from .models import Profile
+from .models import *
 from users.models import *
 
-class ProfileSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = MyUser
-        fields = ['student_no', 'major_type', 'main_major', 'double_major',
-                  'minor_major', 'transfer', 'foreign']
+class BasicSerializer(serializers.ModelSerializer):
+    user_id = serializers.PrimaryKeyRelatedField(read_only = True)
 
+    class Meta:
+        model = Basic
+        fields = '__all__'
 
 class CreditSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Profile
-        fields = ['main_major', 'double_major', 'second_major', 'outside', 
-                  'liberal', 'minor_major', 'teaching', 'self_selection', 
-                  'total_credit', 'total_score']
+    user_id = serializers.PrimaryKeyRelatedField(read_only = True)
 
-class SubjectSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Profile
-        fields = ['status']
+        model = Credit
+        fields = '__all__'
+        
+
+class MajorSubjectSerializer(serializers.ModelSerializer):
+    user_id = serializers.PrimaryKeyRelatedField(read_only = True)
+
+    class Meta:
+        model = MajorCompulsorySubject
+        fields= '__all__'
+   
+class LiberalSubjectSerializer(serializers.ModelSerializer):
+    user_id = serializers.PrimaryKeyRelatedField(read_only = True)
+    
+    class Meta:
+        model = LiberalCompulsorySubject
+        fields = '__all__'
 
 class ExtraSerializer(serializers.ModelSerializer):
+    user_id = serializers.PrimaryKeyRelatedField(read_only = True) # user_id는 읽기 전용
+
     class Meta:
-        model = Profile
-        fields = ['main_test_pass', 'double_test_pass', 'foreign_pass']
+        model = Extra
+        fields = '__all__'
