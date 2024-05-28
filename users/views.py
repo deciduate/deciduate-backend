@@ -47,6 +47,10 @@ class GoogleCallbackView(View):
             user_info = user_info_response.json()
 
             email = user_info.get('email')
+            # 이메일 도메인 검증
+            if not email.endswith('@hufs.ac.kr'):
+                return JsonResponse({'error': '한국외국어대학교 계정으로 로그인해 주세요'}, status=400)
+            
             user, created = MyUser.objects.get_or_create(email=email)
             if created:
                 user.set_password(None)

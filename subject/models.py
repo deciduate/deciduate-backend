@@ -18,7 +18,7 @@ class Subject(models.Model):
 
 
 class ClassOf(models.Model):
-    year = models.IntegerField(verbose_name='학년')
+    year = models.IntegerField(verbose_name='년도')
     
     class Meta:
         db_table = 'class_of'
