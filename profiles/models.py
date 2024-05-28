@@ -74,4 +74,3 @@ class Extra(models.Model):
 
     foreign_pass = models.IntegerField(choices = ForeignPass.choices, null=True)
     user_id = models.ForeignKey(MyUser, on_delete=models.CASCADE, null=True)
-
