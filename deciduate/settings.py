@@ -43,9 +43,11 @@ GOOGLE_SECRET = get_secret('GOOGLE_SECRET')
 REDIRECT_URI = get_secret('REDIRECT_URI')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+#DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*', '.pythonanywhere.com']
+ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ['*', '.pythonanywhere.com']
 
 # Application definition
 
