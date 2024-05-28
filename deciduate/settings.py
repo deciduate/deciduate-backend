@@ -44,6 +44,8 @@ REDIRECT_URI = get_secret('REDIRECT_URI')
 
 DEBUG = False
 ALLOWED_HOSTS = ['jjweidon.pythonanywhere.com']
+# DEBUG = True
+# ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -108,6 +110,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "deciduate.wsgi.application"
 
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
