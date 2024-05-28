@@ -7,7 +7,7 @@ class BasicSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Basic
-        fields = '__all__'
+        exclude = 'admission_year'
 
 class CreditSerializer(serializers.ModelSerializer):
     user_id = serializers.PrimaryKeyRelatedField(read_only = True)

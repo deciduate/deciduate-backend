@@ -63,49 +63,50 @@ class PostCompletion(APIView):
 # 마이페이지 > 내 정보       
 class GetInfo(APIView):
     def get(self, request):
-        user = request.user
 
         # Profile 데이터 가져오기
         try:
-            basic_data = Basic.objects.get(user_id=user.id)
+            basic_data = Basic.objects.get(user=request.user)
             basic_serializer = BasicSerializer(basic_data)
         except Basic.DoesNotExist:
             return Response({'error': '입력된 유저 정보가 없습니다.'}, status=status.HTTP_404_NOT_FOUND)
         
         # Credit 데이터 가져오기
         try:
-            credit_data = Credit.objects.get(user_id=user.id)
+            credit_data = Credit.objects.get(user=request.user)
             credit_serializer = CreditSerializer(credit_data)
         except Credit.DoesNotExist:
             credit_serializer = None
         
         # MajorCompulsorySubject 데이터 가져오기
         try:
-            # 여기 필터 부분이 뭔가 이상함
-            major_subject_data = MajorCompulsorySubject.objects.filter(user_id=user.id)
+            major_subject_data = MajorCompulsorySubject.objects.filter(user=request.user, status=True)
             major_subject_serializer = MajorSubjectSerializer(major_subject_data, many=True)
+            major_true_data = [item['subject'] for item in major_subject_serializer.data]
         except MajorCompulsorySubject.DoesNotExist:
             major_subject_serializer = None
 
         # LiberalCompusory 데이터 가져오기
         try:
-            liberal_subject_data = LiberalCompulsorySubject.objects.filter(user_id=user.id)
+            liberal_subject_data = LiberalCompulsorySubject.objects.filter(user=request.user, status=True)
             liberal_subject_serializer = LiberalSubjectSerializer(liberal_subject_data, many=True)
+            liberal_true_data = [item['subject'] for item in liberal_subject_serializer.data]
         except LiberalCompulsorySubject.DoesNotExist:
             liberal_subeject_serializer = None
         
         # Extra 데이터 가져오기
         try:
-            extra_data = Extra.objects.get(user_id=user.id)
+            extra_data = Extra.objects.get(user=request.user)
             extra_serializer = ExtraSerializer(extra_data)
         except Extra.DoesNotExist:
             extra_serializer = None
 
+        # 전필, 교필과목은 이수한 과목만 전달하도록 수정 필요 -> serializer을 새로 만들어야함
         Response_data = {
             'basic': basic_serializer.data,
             'credit': credit_serializer.data if credit_serializer else None,
-            'major_subject': major_subject_serializer.data if major_subject_serializer else [],
-            'liberal_subject': liberal_subeject_serializer.data if liberal_subeject_serializer else [],
+            'major_subject': major_true_data if major_subject_serializer else [],
+            'liberal_subject': liberal_true_data if liberal_subeject_serializer else [],
             'extra': extra_serializer.data if extra_serializer else None 
         }
 
@@ -119,7 +120,7 @@ class GetInfo(APIView):
 class PutBasic(RetrieveUpdateAPIView):
     def get(self, request):
         try:
-            basic = Basic.objects.get('user_id')
+            basic = Basic.objects.get(user=request.user)
             serializer = BasicSerializer(basic)
             return Response(serializer.data, status=status.HTTP_200_OK)
         except Basic.DoesNotExist:
@@ -127,7 +128,7 @@ class PutBasic(RetrieveUpdateAPIView):
         
     def put(self, request):
         try:
-            basic = Basic.objects.get()
+            basic = Basic.objects.get(user=request.user)
             serializer = BasicSerializer(basic, data=request.data, partial=True)
             if serializer.is_valid():
                 serializer.save()
@@ -149,7 +150,6 @@ class PutCredit(RetrieveUpdateAPIView):
             serializer = CreditSerializer(credit)
             # 201: 요청 정상, 요청된 리소스 포함
             return Response(serializer.data, status=status.HTTP_200_OK)
-        # 이 부분만 약간 고치면 될듯
         except Credit.DoesNotExist:
             # 204: 요청 성공, 제공할 내용 없음 => 입력된 내용 없으니, 프론트에 줄 리소스 없다
             return Response(status=status.HTTP_204_NO_CONTENT)
@@ -170,13 +170,17 @@ class PutSubject(RetrieveUpdateAPIView):
     def get(self, request):
         try:
             major_subject = MajorCompulsorySubject.objects.get(user=request.user)
-            liberal_subject = LiberalCompulsorySubject.objects.get(user=request.user)
             major_subeject_serializer = MajorSubjectSerializer(major_subject)
-            liberal_subject_serializer = LiberalSubjectSerializer(liberal_subject)
+            major_user_data = [item['subject'] for item in major_subeject_serializer.data]
             
+            liberal_subject = LiberalCompulsorySubject.objects.get(user=request.user)
+            liberal_subject_serializer = LiberalSubjectSerializer(liberal_subject)
+            liberal_user_data = [item['subject'] for item in liberal_subject_serializer.data]
+
+            # 여기는 들은 과목, 안 들은 과목 다 보여줘야 하는건가
             response_data = {
-                'major_subject':major_subeject_serializer.data,
-                'liberal_subject': liberal_subject_serializer.data
+                'major_subject': major_user_data,
+                'liberal_subject': liberal_user_data
             }
             return Response(response_data, status=status.HTTP_200_OK)
         except (MajorCompulsorySubject.DoesNotExist, LiberalCompulsorySubject.DoesNotExist):
