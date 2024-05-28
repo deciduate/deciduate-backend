@@ -1,67 +1,101 @@
-from .serializers import *
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from .models import *
-from users.models import *
 from rest_framework import status
 from rest_framework.generics import RetrieveUpdateAPIView
+from rest_framework.permissions import IsAuthenticated
+
+from .models import *
+from .serializers import *
+from users.models import MyUser
 
 # user를 어떻게 해야하는지 고민해야함
 
-# 기본정보입력(1)
-class PostBasic(APIView):
+class BasicView(RetrieveUpdateAPIView):
+    serializer_class = BasicSerializer
+
+    def get(self, request):
+        try:
+            basic = Basic.objects.get(user=request.user)
+            serializer = self.get_serializer(basic)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        except Basic.DoesNotExist:
+            return Response({'detail': '입력된 정보가 없습니다.'}, status=status.HTTP_404_NOT_FOUND)
+
+    # 기본정보입력(1)
     def post(self, request):
-        serializer = BasicSerializer(data=request.data)
+        serializer = self.get_serializer(data=request.data)
         if serializer.is_valid():
-            serializer.save() 
+            serializer.save(user=request.user)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+    # 마이페이지 > 기본 정보
+    def put(self, request):
+        try:
+            basic = Basic.objects.get(user=request.user)
+            serializer = self.get_serializer(basic, data=request.data, partial=True)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data, status=status.HTTP_200_OK)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        except Basic.DoesNotExist:
+            return Response({'detail': '입력된 정보가 없습니다.'}, status=status.HTTP_404_NOT_FOUND)
+
 
 # 기본정보입력(2)
-class PostCompletion(APIView):
-    def post(self, request):
-        credit_data = request.data.get('credit')
-        major_subject_data = request.data.get('major_subject')
-        liberal_subject_data = request.data.get('liberal_subject')
-        extra_data = request.data.get('extra')
+# class CompletionView(APIView):
+#     def post(self, request):
+#         credit_data = request.data.get('credit')
+#         major_subject_data = request.data.get('major_subject')
+#         liberal_subject_data = request.data.get('liberal_subject')
+#         extra_data = request.data.get('extra')
 
-        # 학점 입력받기
-        credit_serializer = CreditSerializer(data=credit_data)
-        if credit_serializer.is_valid():
-            credit_completion = credit_serializer.save()
-        else:
-            return Response(credit_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+#         # 학점 입력받기
+#         credit_serializer = CreditSerializer(data=credit_data)
+#         if credit_serializer.is_valid():
+#             credit_completion = credit_serializer.save()
+#         else:
+#             return Response(credit_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         
-        # 전필 입력받기
-        major_subject_serializer = MajorSubjectSerializer(data=major_subject_data, many=True)
-        if major_subject_serializer.is_valid():
-            major_subject_completion = major_subject_serializer.save()
-        else:
-            return Response(major_subject_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+#         # 전필 입력받기
+#         major_subject_serializer = MajorSubjectSerializer(data=major_subject_data, many=True)
+#         if major_subject_serializer.is_valid():
+#             major_subject_completion = major_subject_serializer.save()
+#         else:
+#             return Response(major_subject_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         
-        # 교필 입력받기
-        liberal_subject_serializer = LiberalSubjectSerializer(data=liberal_subject_data, many=True)
-        if liberal_subject_serializer.is_valid():
-            liberal_subject_completion = liberal_subject_serializer.save()
-        else:
-            return Response(liberal_subject_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+#         # 교필 입력받기
+#         liberal_subject_serializer = LiberalSubjectSerializer(data=liberal_subject_data, many=True)
+#         if liberal_subject_serializer.is_valid():
+#             liberal_subject_completion = liberal_subject_serializer.save()
+#         else:
+#             return Response(liberal_subject_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         
-        # 시험 통과 여부 입력받기
-        extra_serializer = ExtraSerializer(data=extra_data)
-        if extra_serializer.is_valid():
-            extra_profile = extra_serializer.save()
-        else:
-            return Response(extra_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+#         # 시험 통과 여부 입력받기
+#         extra_serializer = ExtraSerializer(data=extra_data)
+#         if extra_serializer.is_valid():
+#             extra_profile = extra_serializer.save()
+#         else:
+#             return Response(extra_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         
-        return Response({
-            'credit': credit_serializer.data,
-            'major_subject': major_subject_serializer.data,
-            'liberal_subject': liberal_subject_serializer.data,
-            'extra': extra_serializer.data
-        }, status=status.HTTP_201_CREATED)
+#         return Response({
+#             'credit': credit_serializer.data,
+#             'major_subject': major_subject_serializer.data,
+#             'liberal_subject': liberal_subject_serializer.data,
+#             'extra': extra_serializer.data
+#         }, status=status.HTTP_201_CREATED)
+    
+class CompletionView(APIView):
+    def post(self, request):
+        serializer = CompletionSerializer(data=request.data)
+        if serializer.is_valid():
+            completion_data = serializer.save()
+            return Response(completion_data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         
 # 마이페이지 > 내 정보       
-class GetInfo(APIView):
+class InfoView(APIView):
     def get(self, request):
 
         # Profile 데이터 가져오기
@@ -79,20 +113,20 @@ class GetInfo(APIView):
             credit_serializer = None
         
         # MajorCompulsorySubject 데이터 가져오기
-        try:
-            major_subject_data = MajorCompulsorySubject.objects.filter(user=request.user, status=True)
-            major_subject_serializer = MajorSubjectSerializer(major_subject_data, many=True)
-            major_true_data = [item['subject'] for item in major_subject_serializer.data]
-        except MajorCompulsorySubject.DoesNotExist:
-            major_subject_serializer = None
+        # try:
+        #     major_subject_data = MajorCompulsorySubject.objects.filter(user=request.user, status=True)
+        #     major_subject_serializer = MajorSubjectSerializer(major_subject_data, many=True)
+        #     major_true_data = [item['subject'] for item in major_subject_serializer.data]
+        # except MajorCompulsorySubject.DoesNotExist:
+        #     major_subject_serializer = None
 
-        # LiberalCompusory 데이터 가져오기
-        try:
-            liberal_subject_data = LiberalCompulsorySubject.objects.filter(user=request.user, status=True)
-            liberal_subject_serializer = LiberalSubjectSerializer(liberal_subject_data, many=True)
-            liberal_true_data = [item['subject'] for item in liberal_subject_serializer.data]
-        except LiberalCompulsorySubject.DoesNotExist:
-            liberal_subeject_serializer = None
+        # # LiberalCompusory 데이터 가져오기
+        # try:
+        #     liberal_subject_data = LiberalCompulsorySubject.objects.filter(user=request.user, status=True)
+        #     liberal_subject_serializer = LiberalSubjectSerializer(liberal_subject_data, many=True)
+        #     liberal_true_data = [item['subject'] for item in liberal_subject_serializer.data]
+        # except LiberalCompulsorySubject.DoesNotExist:
+        #     liberal_subeject_serializer = None
         
         # Extra 데이터 가져오기
         try:
@@ -115,27 +149,6 @@ class GetInfo(APIView):
 
 # 마이페이지 > 상태 3개 필요(미등록, 등록 중, 등록완료)
 # post(미등록), put(등록완료)
-
-# 마이페이지 > 기본 정보
-class PutBasic(RetrieveUpdateAPIView):
-    def get(self, request):
-        try:
-            basic = Basic.objects.get(user=request.user)
-            serializer = BasicSerializer(basic)
-            return Response(serializer.data, status=status.HTTP_200_OK)
-        except Basic.DoesNotExist:
-            return Response({'detail': '입력된 정보가 없습니다.'}, status=status.HTTP_404_NOT_FOUND)
-        
-    def put(self, request):
-        try:
-            basic = Basic.objects.get(user=request.user)
-            serializer = BasicSerializer(basic, data=request.data, partial=True)
-            if serializer.is_valid():
-                serializer.save()
-                return Response(serializer.data, status=status.HTTP_200_OK)
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-        except Basic.DoesNotExist:
-            return Response({'detail': '입력된 정보가 없습니다.'}, status=status.HTTP_404_NOT_FOUND)
   
 # 만약 null 값이 하나라도 있으면 등록중 -> put을 통해 넣을 수 있음
 # 모두 null 값이라면 미등록 -> put을 통해 넣을 수 있음
@@ -143,7 +156,7 @@ class PutBasic(RetrieveUpdateAPIView):
 # -> 모델에서 default 다 없애고, null=True 변경
       
 # 마이페이지 > 취득 학점
-class PutCredit(RetrieveUpdateAPIView):
+class CreditView(RetrieveUpdateAPIView):
     def get(self, request):
         try:
             credit = Credit.objects.get(user=request.user)
@@ -166,7 +179,7 @@ class PutCredit(RetrieveUpdateAPIView):
             return Response({'detail': '입력된 학점이 없습니다.'}, status=status.HTTP_404_NOT_FOUND)
 
 # 마이페이지 > 수강 과목
-class PutSubject(RetrieveUpdateAPIView):
+class SubjectView(RetrieveUpdateAPIView):
     def get(self, request):
         try:
             major_subject = MajorCompulsorySubject.objects.get(user=request.user)
@@ -206,7 +219,7 @@ class PutSubject(RetrieveUpdateAPIView):
 
 
 # 마이페이지 > 졸업시험/논문 | 외국어 인증
-class PutExtra(RetrieveUpdateAPIView):
+class ExtraView(RetrieveUpdateAPIView):
     def get(self, request):
         try:
             extra = Extra.objects.get(user=request.user)

@@ -4,10 +4,10 @@ from . import views
 app_name = 'profiles'
 
 urlpatterns = [
-   path('input/profiles/', views.PostBasic.as_view()),
-   path('input/completions/', views.PostCompletion.as_view()),
-   path('mypage/profiles', views.PutBasic.as_view()),
-   path('mypage/credits', views.PutCredit.as_view()),
-   path('mypage/subjects', views.PutSubject.as_view()),
-   path('mypage/extras', views.PutExtra.as_view()),
+    path('', views.InfoView.as_view()),
+    path('basics/', views.BasicView.as_view()),
+    path('completions/', views.CompletionView.as_view()),
+    path('credits/', views.CreditView.as_view()),
+    path('subjects/', views.SubjectView.as_view()),
+    path('extras/', views.ExtraView.as_view()),
 ]
