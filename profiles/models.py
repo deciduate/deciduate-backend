@@ -2,6 +2,7 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 from major.models import Major
+from users.models import MyUser
 
 # 프로필
 class Profile(models.Model):
@@ -30,7 +31,8 @@ class Profile(models.Model):
         TYPE8 = 8, _('OPIc')
         TYPE9 = 9, _('외국어인증대체과정')
 
-    foreign_pass = models.IntegerField(choices = ForeignPass.choices, default = ForeignPass.NONE)
+    foreign_pass = models.IntegerField(choices = ForeignPass.choices, null=True)
+
 
 class Basic(models.Model):
     class TypeChoices(models.IntegerChoices):
@@ -39,6 +41,7 @@ class Basic(models.Model):
         TYPE3 = 3, _('부전공')
         TYPE4 = 4, _('전공심화+부전공')
 
+    user_id = models.ForeignKey(MyUser, on_delete=models.CASCADE, null=True)
     nickname = models.CharField(verbose_name='닉네임', max_length=20, unique=True)
     student_no = models.CharField(verbose_name='학번', max_length=10, unique=True, null=True)
     major_type = models.IntegerField(verbose_name='전공유형', choices=TypeChoices.choices, default=TypeChoices.TYPE1)

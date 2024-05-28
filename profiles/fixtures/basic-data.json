@@ -1,0 +1,35 @@
+[
+    {
+      "model": "profiles.profile",  
+      "fields": {
+        "main_major": 30,
+        "double_major": 20,
+        "second_major": 10,
+        "outside": 5,
+        "liberal": 15,
+        "minor_major": 8,
+        "teaching": 6,
+        "self_selection": 12,
+        "total_credit": 120,
+        "total_score": 3.5,
+        "main_test_pass": true,
+        "double_test_pass": false,
+        "foreign_pass": 4 
+      }
+    },
+    {
+      "model": "profiles.basic",
+      "pk": 1,
+      "fields": {
+        "user_id": 1, 
+        "nickname": "gembread",
+        "student_no": "21",
+        "major_type": 2, 
+        "transfer": false,
+        "foreign": false,
+        "main_major": 34, 
+        "double_major": 39
+      }
+    }
+  ]
+  

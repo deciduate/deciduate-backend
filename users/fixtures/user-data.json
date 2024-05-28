@@ -1,0 +1,14 @@
+[
+    {
+      "model": "users.myuser",
+      "fields": {
+        "email": "user@example.com",
+        "is_active": true,
+        "is_admin": false,
+        "is_superuser": false,
+        "is_staff": false,
+        "created_at": "2024-05-28T12:34:56Z", 
+      "updated_at": "2024-05-28T12:34:56Z" 
+      }
+    }
+  ]
