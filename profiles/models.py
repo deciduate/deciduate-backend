@@ -4,6 +4,7 @@ from django.core.exceptions import ValidationError
 
 from major.models import Major
 from users.models import MyUser
+
 from subject.models import MajorCompulsory, LiberalCompulsory
 
 class Basic(models.Model):

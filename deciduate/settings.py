@@ -42,9 +42,9 @@ GOOGLE_CLIENT_ID = get_secret('GOOGLE_CLIENT_ID')
 GOOGLE_SECRET = get_secret('GOOGLE_SECRET')
 REDIRECT_URI = get_secret('REDIRECT_URI')
 
-
 DEBUG = False
 ALLOWED_HOSTS = ['jjweidon.pythonanywhere.com']
+
 
 # Application definition
 
@@ -174,6 +174,7 @@ TIME_ZONE = "Asia/Seoul"
 
 USE_I18N = True
 
+#시간대 활성화
 USE_TZ = False
 
 SITE_ID = 1
