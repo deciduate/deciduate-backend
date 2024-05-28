@@ -175,6 +175,7 @@ TIME_ZONE = "Asia/Seoul"
 
 USE_I18N = True
 
+#시간대 활성화
 USE_TZ = False
 
 SITE_ID = 1
