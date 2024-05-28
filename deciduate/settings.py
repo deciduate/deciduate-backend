@@ -42,12 +42,9 @@ GOOGLE_CLIENT_ID = get_secret('GOOGLE_CLIENT_ID')
 GOOGLE_SECRET = get_secret('GOOGLE_SECRET')
 REDIRECT_URI = get_secret('REDIRECT_URI')
 
-# SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = False
-DEBUG = True
+DEBUG = False
+ALLOWED_HOSTS = ['jjweidon.pythonanywhere.com']
 
-ALLOWED_HOSTS = []
-#ALLOWED_HOSTS = ['*', '.pythonanywhere.com']
 
 # Application definition
 
