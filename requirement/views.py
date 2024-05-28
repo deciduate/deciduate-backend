@@ -1,11 +1,12 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Requirement
 from .serializers import RequirementSerializer, CompleteRequirementSerializer
+from rest_framework.views import APIView
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from profiles.models import Basic
-from subject.models import MajorCompulsory, LiberalCompulsory
+from subject.models import MajorCompulsory, LiberalCompulsory, ClassOf
 
 
 @api_view(['GET'])
@@ -43,65 +44,63 @@ def show_requirements(request):
     return Response(serializer.data, status=status.HTTP_200_OK)
 
 
-@api_view(['GET'])
-def requirements(request):
+class RequirementView(APIView):
+    def get(self, request):
+        user_id=request.user.id
 
-    #user_id 받아오기
-    user_id = request.GET.get('user_id')
+        #user_id 없는 경우 오류 보내기
+        if not user_id:
+            return Response({"detail": "User ID is required."}, status=status.HTTP_400_BAD_REQUEST)
+        
+        #Basic에서 user_id와 대조해 user 찾기
+        try:
+            user = Basic.objects.get(id=user_id)
+        except Basic.DoesNotExist:
+            return Response({"detail": "User not found."}, status=status.HTTP_404_NOT_FOUND)
+        
+        #학번, 전공을 user에 맞춰서 정의
+        student_no = user.student_no
+        major = user.main_major
 
-    #user_id 없는 경우 오류 보내기
-    if not user_id:
-        return Response({"detail": "User ID is required."}, status=status.HTTP_400_BAD_REQUEST)
-    
-    #Basic에서 user_id와 대조해 user 찾기
-    try:
-        user = Basic.objects.get(id=user_id)
-    except Basic.DoesNotExist:
-        return Response({"detail": "User not found."}, status=status.HTTP_404_NOT_FOUND)
-    
-    #학번, 전공을 user에 맞춰서 정의
-    student_no = user.student_no
-    major = user.main_major
+        if not major:
+            return Response({"detail": "User's main major is not set."}, status=status.HTTP_400_BAD_REQUEST)
+        
+        #객체로부터 id, name 가져오기
+        major_id = major.id
+        major_name = major.name
+        
+        # 요청된 조건 값들 출력 (디버깅용)
+        print("학번:", student_no)  # 디버깅 출력 추가
+        print("전공:", major_name)  # 디버깅 출력 추가
 
-    if not major:
-        return Response({"detail": "User's main major is not set."}, status=status.HTTP_400_BAD_REQUEST)
-    
-    #객체로부터 id, name 가져오기
-    major_id = major.id
-    major_name = major.name
-    
-    # 요청된 조건 값들 출력 (디버깅용)
-    print("학번:", student_no)  # 디버깅 출력 추가
-    print("전공:", major_name)  # 디버깅 출력 추가
-
-    try:
-        class_of = ClassOf.objects.get(year=student_no)
-    except ClassOf.DoesNotExist:
-        return Response({"detail": "Class of not found for the given student number."}, status=status.HTTP_404_NOT_FOUND)
+        try:
+            class_of = ClassOf.objects.get(year=student_no)
+        except ClassOf.DoesNotExist:
+            return Response({"detail": "Class of not found for the given student number."}, status=status.HTTP_404_NOT_FOUND)
 
 
-    # 전공 필수 과목과 교양 필수 과목 조회
-    major_compulsory = MajorCompulsory.objects.filter(class_of=class_of, major=major)
-    liberal_compulsory = LiberalCompulsory.objects.filter(class_of=class_of)
-    requirements = Requirement.objects.filter(student_no=student_no, major_id=major_id)
+        # 전공 필수 과목과 교양 필수 과목 조회
+        major_compulsory = MajorCompulsory.objects.filter(class_of=class_of, major=major)
+        liberal_compulsory = LiberalCompulsory.objects.filter(class_of=class_of)
+        requirements = Requirement.objects.filter(student_no=student_no, major_id=major_id)
 
-    # 요구사항이 없는 경우
-    if not requirements.exists():
-        print("No requirements found for student:", student_no, "and major:", major_name)  # 디버깅 출력 추가
-        return Response({"detail": "No requirements found."}, status=status.HTTP_404_NOT_FOUND)
+        # 요구사항이 없는 경우
+        if not requirements.exists():
+            print("No requirements found for student:", student_no, "and major:", major_name)  # 디버깅 출력 추가
+            return Response({"detail": "No requirements found."}, status=status.HTTP_404_NOT_FOUND)
 
-    # 첫 번째 요구사항을 가져옴
-    requirement = requirements.first()
-    print("Requirement:", requirement)  # 디버깅 출력 추가
+        # 첫 번째 요구사항을 가져옴
+        requirement = requirements.first()
+        print("Requirement:", requirement)  # 디버깅 출력 추가
 
-    # 요구사항 시리얼라이징
-    requirement_serializer = CompleteRequirementSerializer(requirement)
+        # 요구사항 시리얼라이징
+        requirement_serializer = CompleteRequirementSerializer(requirement)
 
-    # 응답 데이터 구성
-    data = {
-        'major_compulsory': [subject.subject.name for subject in major_compulsory],
-        'liberal_compulsory': [subject.subject.name for subject in liberal_compulsory],
-    }
-    data.update(requirement_serializer.data)  # Requirement 데이터를 추가
+        # 응답 데이터 구성
+        data = {
+            'major_compulsory': [subject.subject.name for subject in major_compulsory],
+            'liberal_compulsory': [subject.subject.name for subject in liberal_compulsory],
+        }
+        data.update(requirement_serializer.data)  # Requirement 데이터를 추가
 
-    return Response(data, status=status.HTTP_200_OK)
+        return Response(data, status=status.HTTP_200_OK)
