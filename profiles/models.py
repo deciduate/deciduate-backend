@@ -1,5 +1,7 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from django.core.exceptions import ValidationError
+
 from major.models import Major
 from users.models import MyUser
 
@@ -20,6 +22,15 @@ class Basic(models.Model):
     main_major = models.ForeignKey(Major, verbose_name='본전공', on_delete=models.SET_NULL, related_name='users_main', null=True)
     double_major = models.ForeignKey(Major, verbose_name='이중전공', on_delete=models.SET_NULL, related_name='users_double', null=True)
     minor_major = models.ForeignKey(Major, verbose_name='부전공', on_delete=models.SET_NULL, related_name='users_minor', null=True)
+
+    def clean(self):
+        if not self.main_major:
+            raise ValidationError("본전공 입력은 필수입니다.")
+        if self.major_type == self.TypeChoices.TYPE2 and not self.double_major:
+            raise ValidationError("이중전공 입력은 필수입니다.")
+        if self.major_type in (self.TypeChoices.TYPE3, self.TypeChoices.TYPE4) and not self.minor_major:
+            raise ValidationError("부전공 입력은 필수입니다.")
+        super().clean()
 
 
 class Credit(models.Model):

@@ -74,23 +74,3 @@ class LogoutView(APIView):
             return JsonResponse({'message': 'Logged out successfully'}, status=200)
         except Exception as e:
             return JsonResponse({'error': str(e)}, status=400)
-
-class RegisterView(APIView):
-    def post(self, request):
-        try:
-            data = json.loads(request.body)
-            email = data['email']
-            if MyUser.objects.filter(email=email).exists():
-                return JsonResponse({'error': 'Email already exists'}, status=400)
-            
-            user = MyUser.objects.create_user(email=email)
-            user.save()
-            
-            refresh = RefreshToken.for_user(user)
-            return JsonResponse({
-                'access': str(refresh.access_token),
-                'refresh': str(refresh),
-                'email': email
-            }, status=201)
-        except Exception as e:
-            return JsonResponse({'error': str(e)}, status=400)

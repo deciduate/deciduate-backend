@@ -1,7 +1,6 @@
 from django.contrib.auth.models import AbstractBaseUser,BaseUserManager,PermissionsMixin
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-from django.core.exceptions import ValidationError
 
 
 class UserManager(BaseUserManager):
@@ -43,15 +42,6 @@ class MyUser(AbstractBaseUser,PermissionsMixin):
     updated_at = models.DateTimeField(verbose_name='수정일', auto_now=True)
     USERNAME_FIELD = 'email'
     # REQUIRED_FIELDS = ['email']
-
-    def clean(self):
-        if not self.main_major:
-            raise ValidationError("본전공 입력은 필수입니다.")
-        if self.major_type == self.TypeChoices.TYPE2 and not self.double_major:
-            raise ValidationError("이중전공 입력은 필수입니다.")
-        if self.major_type in (self.TypeChoices.TYPE3, self.TypeChoices.TYPE4) and not self.minor_major:
-            raise ValidationError("부전공 입력은 필수입니다.")
-        super().clean()
     
     def __str__(self):
         return self.email
