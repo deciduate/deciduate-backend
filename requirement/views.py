@@ -5,8 +5,7 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from profiles.models import Basic
-from subject.models import *
-
+from subject.models import MajorCompulsory, LiberalCompulsory
 
 
 @api_view(['GET'])
