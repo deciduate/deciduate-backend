@@ -6,7 +6,7 @@ from major.models import Major
 from subject.models import Subject, MajorCompulsory, LiberalCompulsory
 from users.models import MyUser
 
-default_user = MyUser.objects.get(id=2)
+# default_user = MyUser.objects.get(id=2)
 
 class BasicSerializer(serializers.ModelSerializer):
     main_major_name = serializers.CharField(source='main_major.name', read_only=True)
@@ -32,8 +32,8 @@ class BasicSerializer(serializers.ModelSerializer):
         minor_major_name = validated_data.pop('minor_major', None)
 
         user = self.context['request'].user
-        if not isinstance(user, MyUser):
-            user = default_user
+        # if not isinstance(user, MyUser):
+        #     user = default_user
 
         if main_major_name:
             try:
@@ -61,9 +61,9 @@ class BasicSerializer(serializers.ModelSerializer):
 
     def update(self, instance, validated_data):
         user = self.context['request'].user
-        if not isinstance(user, MyUser):
-            user = default_user
-            
+        # if not isinstance(user, MyUser):
+        #     user = default_user
+
         if 'main_major' in validated_data:
             main_major_name = validated_data.pop('main_major')
             instance.main_major = Major.objects.get(name=main_major_name)
@@ -130,8 +130,8 @@ class CompletionSerializer(serializers.Serializer):
 
         # Credit 저장
         user = self.context['request'].user
-        if not isinstance(user, MyUser):
-            user = default_user
+        # if not isinstance(user, MyUser):
+        #     user = default_user
 
         # Credit 객체 생성
         credit = Credit.objects.create(**credit_data, user=user)
