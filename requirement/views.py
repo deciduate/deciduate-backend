@@ -46,21 +46,19 @@ def show_requirements(request):
 
 class RequirementView(APIView):
     def get(self, request):
-        user_id=request.user.id
+        user = request.user
 
-        #user_id 없는 경우 오류 보내기
-        if not user_id:
-            return Response({"detail": "User ID is required."}, status=status.HTTP_400_BAD_REQUEST)
-        
-        #Basic에서 user_id와 대조해 user 찾기
+        if not user.is_authenticated:
+            return Response({"detail": "Authentication credentials were not provided."}, status=status.HTTP_401_UNAUTHORIZED)
+
         try:
-            user = Basic.objects.get(id=user_id)
+            basic_user = Basic.objects.get(user=user)
         except Basic.DoesNotExist:
-            return Response({"detail": "User not found."}, status=status.HTTP_404_NOT_FOUND)
-        
+            return Response({"detail": "Basic profile is required."}, status=status.HTTP_404_NOT_FOUND)
+
         #학번, 전공을 user에 맞춰서 정의
-        student_no = user.student_no
-        major = user.main_major
+        student_no = basic_user.student_no
+        major = basic_user.main_major
 
         if not major:
             return Response({"detail": "User's main major is not set."}, status=status.HTTP_400_BAD_REQUEST)

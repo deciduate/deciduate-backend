@@ -1,96 +1,135 @@
 from rest_framework import serializers
-from .models import *
+from rest_framework.exceptions import ValidationError
+
+from profiles.models import Basic, Credit, UserMajorCompulsory, UserLiberalCompulsory, Extra
+from major.models import Major
+from subject.models import Subject, MajorCompulsory, LiberalCompulsory
+
 
 class BasicSerializer(serializers.ModelSerializer):
-    # user_id = serializers.PrimaryKeyRelatedField(read_only = True)
+    main_major_name = serializers.CharField(source='main_major.name', read_only=True)
+    double_major_name = serializers.CharField(source='double_major.name', read_only=True)
+    minor_major_name = serializers.CharField(source='minor_major.name', read_only=True)
+    
+    main_major = serializers.CharField(write_only=True)
+    double_major = serializers.CharField(write_only=True, allow_null=True, required=False)
+    minor_major = serializers.CharField(write_only=True, allow_null=True, required=False)
 
     class Meta:
         model = Basic
-        fields = ['user', 'student_no', 'major_type', 'transfer', 'foreign', 'main_major', 'double_major', 'minor_major']
+        fields = [
+            'id', 'user', 'student_no', 'major_type', 'transfer', 'foreign_st', 
+            'main_major', 'double_major', 'minor_major',
+            'main_major_name', 'double_major_name', 'minor_major_name'
+        ]
 
     def create(self, validated_data):
         main_major_name = validated_data.pop('main_major', None)
+        double_major_name = validated_data.pop('double_major', None)
+        minor_major_name = validated_data.pop('minor_major', None)
+
         if main_major_name:
-            major = Major.objects.get(name=main_major_name)
-            validated_data['main_major'] = major
-        return super().create(validated_data)
+            try:
+                main_major = Major.objects.get(name=main_major_name)
+                validated_data['main_major'] = main_major
+            except Major.DoesNotExist:
+                raise ValidationError({"main_major": "Major with this name does not exist."})
+        if double_major_name:
+            try:
+                double_major = Major.objects.get(name=double_major_name)
+                validated_data['double_major'] = double_major
+            except Major.DoesNotExist:
+                raise ValidationError({"double_major": "Major with this name does not exist."})
+        if minor_major_name:
+            try:
+                minor_major = Major.objects.get(name=minor_major_name)
+                validated_data['minor_major'] = minor_major
+            except Major.DoesNotExist:
+                raise ValidationError({"minor_major": "Major with this name does not exist."})
 
-class CreditSerializer(serializers.ModelSerializer):
-    user_id = serializers.PrimaryKeyRelatedField(read_only = True)
+        return Basic.objects.create(**validated_data)
 
-    class Meta:
-        model = Credit
-        fields = '__all__'
+
+    def update(self, instance, validated_data):
+        if 'main_major' in validated_data:
+            main_major_name = validated_data.pop('main_major')
+            instance.main_major = Major.objects.get(name=main_major_name)
+
+        if 'double_major' in validated_data:
+            double_major_name = validated_data.pop('double_major')
+            instance.double_major = Major.objects.get(name=double_major_name)
+
+        if 'minor_major' in validated_data:
+            minor_major_name = validated_data.pop('minor_major')
+            instance.minor_major = Major.objects.get(name=minor_major_name)
+
+        return super().update(instance, validated_data)
         
 
-# class MajorSubjectSerializer(serializers.ModelSerializer):
-#     subject_name = serializers.SerializerMethodField()
-
-#     class Meta:
-#         model = MajorCompulsorySubject
-#         fields = ['id', 'status', 'subject', 'subject_name', 'user']
-
-#     def get_subject_name(self, obj):
-#         return obj.subject.name if obj.subject else None
-   
-# class LiberalSubjectSerializer(serializers.ModelSerializer):
-#     user_id = serializers.PrimaryKeyRelatedField(read_only = True)
-    
-#     class Meta:
-#         model = LiberalCompulsorySubject
-#         fields = '__all__'
-
-# class ExtraSerializer(serializers.ModelSerializer):
-#     user_id = serializers.PrimaryKeyRelatedField(read_only = True) # user_id는 읽기 전용
-
-#     class Meta:
-#         model = Extra
-#         fields = '__all__'
-
-
-class MajorCompulsorySubjectSerializer(serializers.ModelSerializer):
+class CreditSerializer(serializers.ModelSerializer):
     class Meta:
-        model = MajorCompulsorySubject
-        fields = ['user', 'status', 'subject']
+        model = Credit
+        fields = [
+            'id', 'main_major_credit', 'double_major_credit', 'second_major_credit', 
+            'outside_credit', 'liberal_credit', 'minor_major_credit', 'teaching_credit', 
+            'self_selection_credit', 'total_credit', 'total_score', 'user'
+        ]
 
-class LiberalCompulsorySubjectSerializer(serializers.ModelSerializer):
+class UserMajorCompulsorySerializer(serializers.ModelSerializer):
+    subject_name = serializers.CharField(source='subject.subject.name', read_only=True)
+
     class Meta:
-        model = LiberalCompulsorySubject
-        fields = ['user', 'status', 'subject']
+        model = UserMajorCompulsory
+        fields = ['id', 'status', 'subject_name', 'user']
+
+class UserLiberalCompulsorySerializer(serializers.ModelSerializer):
+    subject_name = serializers.CharField(source='subject.subject.name', read_only=True)
+
+    class Meta:
+        model = UserLiberalCompulsory
+        fields = ['id', 'status', 'subject_name', 'user']
 
 class ExtraSerializer(serializers.ModelSerializer):
     class Meta:
         model = Extra
-        fields = ['user', 'main_test_pass', 'double_test_pass', 'foreign_pass']
+        fields = [
+            'id', 'main_test_pass', 'double_test_pass', 'foreign_pass', 'user'
+        ]
 
 class CompletionSerializer(serializers.Serializer):
-    credit = CreditSerializer(required=True)
-    major_subject = serializers.ListField(child=serializers.CharField(), required=False)
-    liberal_subject = serializers.ListField(child=serializers.CharField(), required=False)
-    extra = ExtraSerializer(required=True)
+    credit = CreditSerializer()
+    major_subject = serializers.ListField(child=serializers.CharField())
+    liberal_subject = serializers.ListField(child=serializers.CharField())
+    extra = ExtraSerializer()
 
     def create(self, validated_data):
+        user = self.context['request'].user
         credit_data = validated_data.pop('credit')
-        major_subject_data = validated_data.pop('major_subject', [])
-        liberal_subject_data = validated_data.pop('liberal_subject', [])
+        major_subject_data = validated_data.pop('major_subject')
+        liberal_subject_data = validated_data.pop('liberal_subject')
         extra_data = validated_data.pop('extra')
 
-        credit_instance = Credit.objects.create(**credit_data)
-        extra_instance = Extra.objects.create(**extra_data)
+        # Credit 저장
+        credit = Credit.objects.create(user=user, **credit_data)
 
-        major_subject_instances = []
+        # UserMajorCompulsory 저장
         for subject_name in major_subject_data:
-            subject_instance = MajorCompulsorySubject.objects.create(subject=subject_name)
-            major_subject_instances.append(subject_instance)
+            subject = Subject.objects.get(name=subject_name)
+            major_compulsory = MajorCompulsory.objects.get(subject=subject)
+            UserMajorCompulsory.objects.create(user=user, subject=major_compulsory, status=True)
 
-        liberal_subject_instances = []
+        # UserLiberalCompulsory 저장
         for subject_name in liberal_subject_data:
-            subject_instance = LiberalCompulsorySubject.objects.create(subject=subject_name)
-            liberal_subject_instances.append(subject_instance)
+            subject = Subject.objects.get(name=subject_name)
+            liberal_compulsory = LiberalCompulsory.objects.get(subject=subject)
+            UserLiberalCompulsory.objects.create(user=user, subject=liberal_compulsory, status=True)
+
+        # Extra 저장
+        extra = Extra.objects.create(user=user, **extra_data)
 
         return {
-            'credit': credit_instance,
-            'major_subject': major_subject_instances,
-            'liberal_subject': liberal_subject_instances,
-            'extra': extra_instance
+            'credit': CreditSerializer(credit).data,
+            'major_subject': major_subject_data,
+            'liberal_subject': liberal_subject_data,
+            'extra': ExtraSerializer(extra).data
         }
