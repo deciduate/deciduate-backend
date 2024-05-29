@@ -6,7 +6,7 @@ from major.models import Major
 from subject.models import Subject, MajorCompulsory, LiberalCompulsory
 from users.models import MyUser
 
-
+default_user = MyUser.objects.get(id=2)
 
 class BasicSerializer(serializers.ModelSerializer):
     main_major_name = serializers.CharField(source='main_major.name', read_only=True)
@@ -24,11 +24,16 @@ class BasicSerializer(serializers.ModelSerializer):
             'main_major', 'double_major', 'minor_major',
             'main_major_name', 'double_major_name', 'minor_major_name'
         ]
+        read_only_fields = ['id', 'user']
 
     def create(self, validated_data):
         main_major_name = validated_data.pop('main_major', None)
         double_major_name = validated_data.pop('double_major', None)
         minor_major_name = validated_data.pop('minor_major', None)
+
+        user = self.context['request'].user
+        if not isinstance(user, MyUser):
+            user = default_user
 
         if main_major_name:
             try:
@@ -49,10 +54,16 @@ class BasicSerializer(serializers.ModelSerializer):
             except Major.DoesNotExist:
                 raise ValidationError({"minor_major": "Major with this name does not exist."})
 
+        validated_data['user'] = user
+        
         return Basic.objects.create(**validated_data)
 
 
     def update(self, instance, validated_data):
+        user = self.context['request'].user
+        if not isinstance(user, MyUser):
+            user = default_user
+            
         if 'main_major' in validated_data:
             main_major_name = validated_data.pop('main_major')
             instance.main_major = Major.objects.get(name=main_major_name)
@@ -79,6 +90,7 @@ class CreditSerializer(serializers.ModelSerializer):
             'outside_credit', 'liberal_credit', 'minor_major_credit', 'teaching_credit', 
             'self_selection_credit', 'total_credit', 'total_score', 'user'
         ]
+        read_only_fields = ['id', 'user']
 
 class UserMajorCompulsorySerializer(serializers.ModelSerializer):
     subject_name = serializers.CharField(source='subject.subject.name', read_only=True)
@@ -86,6 +98,7 @@ class UserMajorCompulsorySerializer(serializers.ModelSerializer):
     class Meta:
         model = UserMajorCompulsory
         fields = ['id', 'status', 'subject_name', 'user']
+        read_only_fields = ['id', 'user']
 
 class UserLiberalCompulsorySerializer(serializers.ModelSerializer):
     subject_name = serializers.CharField(source='subject.subject.name', read_only=True)
@@ -93,6 +106,7 @@ class UserLiberalCompulsorySerializer(serializers.ModelSerializer):
     class Meta:
         model = UserLiberalCompulsory
         fields = ['id', 'status', 'subject_name', 'user']
+        read_only_fields = ['id', 'user']
 
 class ExtraSerializer(serializers.ModelSerializer):
     class Meta:
@@ -100,6 +114,7 @@ class ExtraSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'main_test_pass', 'double_test_pass', 'foreign_certification', 'user'
         ]
+        read_only_fields = ['id', 'user']
 
 class CompletionSerializer(serializers.Serializer):
     credit = CreditSerializer()
@@ -115,11 +130,11 @@ class CompletionSerializer(serializers.Serializer):
 
         # Credit 저장
         user = self.context['request'].user
-        credit_data.pop('user', None) 
+        if not isinstance(user, MyUser):
+            user = default_user
 
         # Credit 객체 생성
         credit = Credit.objects.create(**credit_data, user=user)
-
 
         # UserMajorCompulsory 저장
         for subject_name in major_subject_data:
@@ -137,9 +152,9 @@ class CompletionSerializer(serializers.Serializer):
 
 
         # Extra 저장
-        extra_data.pop('user', None)
-
         extra = Extra.objects.create(user=user, **extra_data)
+
+        validated_data['user'] = user
 
         return {
             'credit': CreditSerializer(credit).data,
