@@ -5,6 +5,10 @@ from profiles.serializers import *
 from users.models import *
 from profiles.models import *
 from rest_framework import status
+from subject.models import MajorCompulsory, LiberalCompulsory, ClassOf
+from requirement.models import Requirement
+
+
 
 import json, os
 
@@ -49,8 +53,16 @@ class GetResult(APIView):
             #get_or_create는 튜플로 반환하는 함수임. 
             credit, created = Credit.objects.get_or_create(user=request.user)
             extra = Extra.objects.get(user=request.user)
-            major_subject = UserMajorCompulsory.objects.filter(user=request.user, status=False)
-            liberal_subject = UserLiberalCompulsory.objects.filter(user=request.user, status=False)
+
+            #사용자가 수강한 전공 및 교양 과목 리스트 가져오기
+            major_subject = UserMajorCompulsory.objects.filter(user=request.user)
+            major_subeject_serializer = UserMajorCompulsorySerializer(major_subject,many = True) #many = True : 여러개의 객체를 시리얼라이즈할 때 사용함
+            major_user_data = [item['subject_name'] for item in major_subeject_serializer.data] #subject -> subject_name으로 수정
+            
+            liberal_subject = UserLiberalCompulsory.objects.filter(user=request.user)
+            liberal_subject_serializer = UserLiberalCompulsorySerializer(liberal_subject, many = True)
+            liberal_user_data = [item['subject_name'] for item in liberal_subject_serializer.data]
+            
             print("Data fetched successfully from the database")
         except Basic.DoesNotExist:
             return Response({'detail': '입력된 기본 정보가 없습니다.'}, status=status.HTTP_404_NOT_FOUND)
@@ -71,22 +83,23 @@ class GetResult(APIView):
 
         print(f"Serialized data: Basic: {basic_serializer.data}, Credit: {credit_serializer.data}, Extra: {extra_serializer.data}")
 
-
+        print(major_subject_serializer)
+        
         student_no = basic_serializer.data['student_no']
         main_major = basic_serializer.data['main_major_name'] #학과명
 
         print(f"Student no: {student_no}, Main major: {main_major}")
 
         print(f"Credit data: {credit_serializer.data}")
-        if 'main_major' not in credit_serializer.data:
-            print("Error: 'main_major' key is missing in credit data")
-            return Response({'detail': "'main_major' key is missing in credit data"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        if 'main_major_credit' not in credit_serializer.data:
+            print("Error: 'main_major_credit' key is missing in credit data")
+            return Response({'detail': "'main_major_credit' key is missing in credit data"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         
         #유저데이터
-        u_main_major = credit_serializer.data['main_major']
-        u_double_major = credit_serializer.data.get('double_major', 0)  # 기본값 0 설정
-        u_minor_major = credit_serializer.data.get('minor_major', 0)    # 기본값 0 설정
-        u_liberal = credit_serializer.data['liberal']
+        u_main_major = credit_serializer.data['main_major_credit']
+        u_double_major = credit_serializer.data.get('double_major_credit',0)# 기본값 0 설정
+        u_minor_major = credit_serializer.data.get('minor_major_credit',0)# 기본값 0 설정
+        u_liberal = credit_serializer.data['liberal_credit']
         u_total_score = credit_serializer.data['total_score']
 
 
@@ -95,14 +108,15 @@ class GetResult(APIView):
         if not requirement_data:
             print("Requirement data not found")
             return Response({'detail': '졸업 요건 데이터가 없습니다.'}, status=status.HTTP_404_NOT_FOUND)
-
-        result = {}
+        
+        # result = {} #result 초기화
 
         for entry in requirement_data:
             print(f"Processing entry: {entry}")
             if entry['fields']['student_no'] == str(student_no):
-                print(f"Matching student no: {student_no} with entry: {entry}")
+                
                 if entry['fields']['major_type'] == 1:
+                    result = {}
                     # 졸업요건
                     re_main_major = int(entry['fields']['main_major'])
                     re_liberal = int(entry['fields']['liberal'])
@@ -112,14 +126,13 @@ class GetResult(APIView):
                         result['main_major'] = re_main_major - u_main_major
                     if re_liberal > u_liberal:
                         result['liberal'] = re_liberal - u_liberal
+                    break #result 생성 완료 후 break
 
                 elif entry['fields']['major_type'] == 2:
+                    result = {}
                     re_main_major = int(entry['fields']['main_major'])
                     re_double_major = int(entry['fields']['double_major'])
                     re_liberal = int(entry['fields']['liberal'])
-
-    
-                    print(type(re_main_major), type(u_main_major))
 
                     if re_main_major > u_main_major:
                         result['main_major'] = re_main_major - u_main_major
@@ -127,8 +140,10 @@ class GetResult(APIView):
                         result['double_major'] = re_double_major - u_double_major
                     if re_liberal > u_liberal:
                         result['liberal'] = re_liberal - u_liberal
+                    break
 
                 elif entry['fields']['major_type'] == 3 or entry['fields']['major_type'] == 4:
+                    result = {}
                     re_main_major = int(entry['fields']['main_major'])
                     re_minor_major = int(entry['fields']['minor_major'])
                     re_liberal = int(entry['fields']['liberal'])
@@ -140,6 +155,7 @@ class GetResult(APIView):
                         result['minor_major'] = re_minor_major - u_minor_major
                     if re_liberal > u_liberal:
                         result['liberal'] = re_liberal - u_liberal
+                    break
         
         print(f"Intermediate result: {result}")
 
@@ -149,12 +165,47 @@ class GetResult(APIView):
         if u_total_score <= 2.00:
             result['total_score'] = False
 
-        # 전필과목 이수 여부: 수강하지 않은 과목의 이름 보내기
-        result['major_compulsory'] = [item['subject'] for item in major_subject_serializer.data]
+        # 사용자 전공 필수 과목 리스트 가져오기
+        user = request.user
 
-        # 교필과목 이수 여부: 수강하지 않은 과목의 이름 보내기
-        result['liberal_compulsory'] = [item['subject'] for item in liberal_subject_serializer.data]
+        if not user.is_authenticated:
+            return Response({"detail": "Authentication credentials were not provided."}, status=status.HTTP_401_UNAUTHORIZED)
+
+        try:
+            basic_user = Basic.objects.get(user=user)
+        except Basic.DoesNotExist:
+            return Response({"detail": "Basic profile is required."}, status=status.HTTP_404_NOT_FOUND)
+
+        #학번, 전공을 user에 맞춰서 정의
+        student_no = basic_user.student_no
+        major = basic_user.main_major
+
+        if not major:
+            return Response({"detail": "User's main major is not set."}, status=status.HTTP_400_BAD_REQUEST)
+
+
+        try:
+            class_of = ClassOf.objects.get(year=student_no)
+        except ClassOf.DoesNotExist:
+            return Response({"detail": "Class of not found for the given student number."}, status=status.HTTP_404_NOT_FOUND)
         
+        #전공필수, 교양필수 과목 가져오기
+        major_compulsory = MajorCompulsory.objects.filter(class_of=class_of, major=major)
+        liberal_compulsory = LiberalCompulsory.objects.filter(class_of=class_of)
+
+        #아직 수강하지 않은 전공 및 교양 필수 과목 리스트 정의
+        user_unattended_major_compulsory = []
+        for subject in major_compulsory:
+            if subject.subject.name not in major_user_data:
+                user_unattended_major_compulsory.append(subject.subject.name)
+        result['major_compulsory'] = user_unattended_major_compulsory
+
+        user_unattended_liberal_compulsory = []
+        for subject in liberal_compulsory:
+            if subject.subject.name not in liberal_user_data:
+                user_unattended_liberal_compulsory.append(subject.subject.name)
+        result['liberal_compulsory'] = user_unattended_liberal_compulsory
+
         # 시험 통과 여부
         u_main_test_pass = extra_serializer.data['main_test_pass']
         u_double_test_pass = extra_serializer.data['double_test_pass']
@@ -164,7 +215,7 @@ class GetResult(APIView):
             result['main_test_pass'] = False
         if u_double_test_pass == False:
             result['double_test_pass'] = False
-        if u_foreign_pass == "None":
+        if u_foreign_pass == 1:
             result['foreign_certification'] = False
 
         print(f"Final result: {result}")
