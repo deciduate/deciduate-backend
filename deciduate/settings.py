@@ -42,10 +42,10 @@ GOOGLE_CLIENT_ID = get_secret('GOOGLE_CLIENT_ID')
 GOOGLE_SECRET = get_secret('GOOGLE_SECRET')
 REDIRECT_URI = get_secret('REDIRECT_URI')
 
-# DEBUG = False
-# ALLOWED_HOSTS = ['jjweidon.pythonanywhere.com']
-DEBUG = True
-ALLOWED_HOSTS = []
+DEBUG = False
+ALLOWED_HOSTS = ['jjweidon.pythonanywhere.com']
+# DEBUG = True
+# ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -142,14 +142,14 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # CORS 설정
-CORS_ALLOWED_ORIGINS = [
-    "https://jjweidon.pythonanywhere.com",
-    "http://localhost:8000",
-    "http://localhost:3000",
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "https://jjweidon.pythonanywhere.com",
+#     "http://localhost:8000",
+#     "http://localhost:3000",
+# ]
 
 # 모든 도메인 허용 (권장하지 않음)
-# CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = True
 
 # 특정 HTTP 메서드 허용
 CORS_ALLOW_METHODS = [
@@ -166,6 +166,7 @@ CORS_ALLOW_HEADERS = [
     "Authorization",
     "Content-Type",
 ]
+
 CORS_ALLOW_CREDENTIALS = True
 
 
@@ -207,12 +208,13 @@ ACCOUNT_AUTHENTICATION_METHOD = 'email'
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+        # 'rest_framework.authentication.BasicAuthentication',
     ),
     'DEFAULT_PERMISSION_CLASSES': (
-        # 'rest_framework.permissions.IsAuthenticated', # 인증된 사용자만 접근
+        'rest_framework.permissions.IsAuthenticated', # 인증된 사용자만 접근
         # 'rest_framework.permissions.IsAdminUser', # 관리자만 접근
-        'rest_framework.permissions.AllowAny', # 누구나 접근
+        # 'rest_framework.permissions.AllowAny', # 누구나 접근
     ),
 }
 
