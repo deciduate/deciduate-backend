@@ -22,7 +22,7 @@ class CompletionView(generics.GenericAPIView):
         serializer.is_valid(raise_exception=True)
         data = serializer.save()
         return Response(data, status=status.HTTP_201_CREATED)
-
+      
 # 마이페이지 > 내 정보 -> get 확인 필요   
 class InfoView(APIView):
     def get(self, request):
@@ -81,6 +81,7 @@ class CreditView(RetrieveUpdateAPIView):
     serializer_class = CreditSerializer
 
 # 마이페이지 > 수강 과목 -> get, put 확인 필요
+
 class SubjectView(RetrieveUpdateAPIView):
     def get(self, request):
         try:

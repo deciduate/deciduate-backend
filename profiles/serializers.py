@@ -129,6 +129,7 @@ class CompletionSerializer(serializers.Serializer):
 
         # Extra 저장
         extra_data.pop('user', None)
+
         extra = Extra.objects.create(user=user, **extra_data)
 
         return {
