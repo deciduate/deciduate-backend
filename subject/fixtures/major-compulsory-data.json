@@ -1,0 +1,2462 @@
+[
+    {
+        "_comment": "전자공학과/전기회로/18",
+        "pk": 1,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 12,
+            "major": 43, 
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "전자공학과/전기회로/19",
+        "pk": 2,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 12,
+            "major": 43,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "전자공학과/전기회로/20",
+        "pk": 3,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 12,
+            "major": 43,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "전자공학과/전기회로/21",
+        "pk": 4,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 12,
+            "major": 43,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "전자공학과/전기회로/22",
+        "pk": 5,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 12,
+            "major": 43,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "전자공학과/전기회로/23",
+        "pk": 6,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 12,
+            "major": 43,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "전자공학과/전기회로/24",
+        "pk": 7,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 12,
+            "major": 43,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "전자공학과/전자공학종합설계프로젝트/18",
+        "pk": 8,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 13,
+            "major": 43,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "전자공학과/전자공학종합설계프로젝트/19",
+        "pk": 9,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 13,
+            "major": 43,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "전자공학과/전자공학종합설계프로젝트/20",
+        "pk": 10,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 13,
+            "major": 43,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "전자공학과/전자공학종합설계프로젝트/21",
+        "pk": 11,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 13,
+            "major": 43,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "전자공학과/전자공학종합설계프로젝트/22",
+        "pk": 12,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 13,
+            "major": 43,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "전자공학과/전자공학종합설계프로젝트/23",
+        "pk": 13,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 13,
+            "major": 43,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "전자공학과/전자공학종합설계프로젝트/24",
+        "pk": 14,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 13,
+            "major": 43,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계학및연습1/18",
+        "pk": 15,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 14,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계학및연습1/19",
+        "pk": 16,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 14,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계학및연습1/20",
+        "pk": 17,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 14,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계학및연습1/21",
+        "pk": 18,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 14,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계학및연습1/22",
+        "pk": 19,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 14,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계학및연습1/23",
+        "pk": 20,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 14,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계학및연습1/24",
+        "pk": 21,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 14,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계학및연습2/18",
+        "pk": 22,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 15,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계학및연습2/19",
+        "pk": 23,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 15,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계학및연습2/20",
+        "pk": 24,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 15,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계학및연습2/21",
+        "pk": 25,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 15,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계학및연습2/22",
+        "pk": 26,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 15,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계학및연습2/23",
+        "pk": 27,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 15,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계학및연습2/24",
+        "pk": 28,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 15,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계학의활용및실습/18",
+        "pk": 29,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 16,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계학의활용및실습/19",
+        "pk": 30,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 16,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계학의활용및실습/20",
+        "pk": 31,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 16,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계학의활용및실습/21",
+        "pk": 32,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 16,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계학의활용및실습/22",
+        "pk": 33,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 16,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계학의활용및실습/23",
+        "pk": 34,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 16,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계학의활용및실습/24",
+        "pk": 35,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 16,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계학개론/18",
+        "pk": 36,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 17,
+            "major": 34,
+            "main_compulsory": false,
+            "sub_compulsory": true,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계학개론/19",
+        "pk": 37,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 17,
+            "major": 34,
+            "main_compulsory": false,
+            "sub_compulsory": true,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계학개론/20",
+        "pk": 38,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 17,
+            "major": 34,
+            "main_compulsory": false,
+            "sub_compulsory": true,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계학개론/21",
+        "pk": 39,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 17,
+            "major": 34,
+            "main_compulsory": false,
+            "sub_compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계학개론/22",
+        "pk": 40,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 17,
+            "major": 34,
+            "main_compulsory": false,
+            "sub_compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계학개론/23",
+        "pk": 41,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 17,
+            "major": 34,
+            "main_compulsory": false,
+            "sub_compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계학개론/24",
+        "pk": 42,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 17,
+            "major": 34,
+            "main_compulsory": false,
+            "sub_compulsory": true,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계행렬론/18",
+        "pk": 43,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 18,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계행렬론/19",
+        "pk": 44,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 18,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계행렬론/20",
+        "pk": 45,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 18,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계행렬론/21",
+        "pk": 46,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 18,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계행렬론/22",
+        "pk": 47,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 18,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계행렬론/23",
+        "pk": 48,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 18,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "통계학과/통계행렬론/24",
+        "pk": 49,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 18,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "통계학과/확률분포론/18",
+        "pk": 50,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 19,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "통계학과/확률분포론/19",
+        "pk": 51,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 19,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "통계학과/확률분포론/20",
+        "pk": 52,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 19,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "통계학과/확률분포론/21",
+        "pk": 53,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 19,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "통계학과/확률분포론/22",
+        "pk": 54,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 19,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "통계학과/확률분포론/23",
+        "pk": 55,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 19,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "통계학과/확률분포론/24",
+        "pk": 56,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 19,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "통계학과/회귀분석/18",
+        "pk": 57,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 20,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "통계학과/회귀분석/19",
+        "pk": 58,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 20,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "통계학과/회귀분석/20",
+        "pk": 59,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 20,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "통계학과/회귀분석/21",
+        "pk": 60,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 20,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "통계학과/회귀분석/22",
+        "pk": 61,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 20,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "통계학과/회귀분석/23",
+        "pk": 62,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 20,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "통계학과/회귀분석/24",
+        "pk": 63,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 20,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "통계학과/수리통계학/18",
+        "pk": 64,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 21,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "통계학과/수리통계학/19",
+        "pk": 65,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 21,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "통계학과/수리통계학/20",
+        "pk": 66,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 21,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "통계학과/수리통계학/21",
+        "pk": 67,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 21,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "통계학과/수리통계학/22",
+        "pk": 68,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 21,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "통계학과/수리통계학/23",
+        "pk": 69,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 21,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "통계학과/수리통계학/24",
+        "pk": 70,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 21,
+            "major": 34,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "수학과/미적분학및연습1/18",
+        "pk": 71,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 22,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "수학과/미적분학및연습1/19",
+        "pk": 72,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 22,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "수학과/미적분학및연습1/20",
+        "pk": 73,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 22,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "수학과/미적분학및연습1/21",
+        "pk": 74,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 22,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "수학과/미적분학및연습1/22",
+        "pk": 75,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 22,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "수학과/미적분학및연습1/23",
+        "pk": 76,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 22,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "수학과/미적분학및연습1/24",
+        "pk": 77,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 22,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "수학과/미적분학및연습2/18",
+        "pk": 78,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 23,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "수학과/미적분학및연습2/19",
+        "pk": 79,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 23,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "수학과/미적분학및연습2/20",
+        "pk": 80,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 23,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "수학과/미적분학및연습2/21",
+        "pk": 81,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 23,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "수학과/미적분학및연습2/22",
+        "pk": 82,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 23,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "수학과/미적분학및연습2/23",
+        "pk": 83,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 23,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "수학과/미적분학및연습2/24",
+        "pk": 84,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 23,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "수학과/해석학개론1/18",
+        "pk": 85,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 24,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "수학과/해석학개론1/19",
+        "pk": 86,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 24,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "수학과/해석학개론1/20",
+        "pk": 87,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 24,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "수학과/해석학개론1/21",
+        "pk": 88,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 24,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "수학과/해석학개론1/22",
+        "pk": 89,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 24,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "수학과/해석학개론1/23",
+        "pk": 90,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 24,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "수학과/해석학개론1/24",
+        "pk": 91,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 24,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "수학과/해석학개론2/18",
+        "pk": 92,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 25,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "수학과/해석학개론2/19",
+        "pk": 93,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 25,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "수학과/해석학개론2/20",
+        "pk": 94,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 25,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "수학과/해석학개론2/21",
+        "pk": 95,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 25,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "수학과/해석학개론2/22",
+        "pk": 96,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 25,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "수학과/해석학개론2/23",
+        "pk": 97,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 25,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "수학과/해석학개론2/24",
+        "pk": 98,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 25,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "수학과/선형대수학및연습1/18",
+        "pk": 99,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 26,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "수학과/선형대수학및연습1/19",
+        "pk": 100,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 26,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "수학과/선형대수학및연습1/20",
+        "pk": 101,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 26,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "수학과/선형대수학및연습1/21",
+        "pk": 102,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 26,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "수학과/선형대수학및연습1/22",
+        "pk": 103,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 26,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "수학과/선형대수학및연습1/23",
+        "pk": 104,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 26,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "수학과/선형대수학및연습1/24",
+        "pk": 105,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 26,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "수학과/선형대수학및연습2/18",
+        "pk": 106,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 27,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "수학과/선형대수학및연습2/19",
+        "pk": 107,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 27,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "수학과/선형대수학및연습2/20",
+        "pk": 108,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 27,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "수학과/선형대수학및연습2/21",
+        "pk": 109,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 27,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "수학과/선형대수학및연습2/22",
+        "pk": 110,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 27,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "수학과/선형대수학및연습2/23",
+        "pk": 111,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 27,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "수학과/선형대수학및연습2/24",
+        "pk": 112,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 27,
+            "major": 33,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "GBT/경영학원론/18",
+        "pk": 113,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 28,
+            "major": 31,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "GBT/경영학원론/19",
+        "pk": 114,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 28,
+            "major": 31,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "GBT/경영학원론/20",
+        "pk": 115,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 28,
+            "major": 31,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "GBT/경영학원론/21",
+        "pk": 116,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 28,
+            "major": 31,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "GBT/경영학원론/22",
+        "pk": 117,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 28,
+            "major": 31,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "GBT/경영학원론/23",
+        "pk": 118,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 28,
+            "major": 31,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "GBT/경영학원론/24",
+        "pk": 119,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 28,
+            "major": 31,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "GBT/회계원리/18",
+        "pk": 120,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 29,
+            "major": 31,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "GBT/회계원리/19",
+        "pk": 121,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 29,
+            "major": 31,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "GBT/회계원리/20",
+        "pk": 122,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 29,
+            "major": 31,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "GBT/회계원리/21",
+        "pk": 123,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 29,
+            "major": 31,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "GBT/회계원리/22",
+        "pk": 124,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 29,
+            "major": 31,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "GBT/회계원리/23",
+        "pk": 125,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 29,
+            "major": 31,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "GBT/회계원리/24",
+        "pk": 126,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 29,
+            "major": 31,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "GBT/컴퓨터프로그래밍/18",
+        "pk": 127,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 30,
+            "major": 31,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "GBT/컴퓨터프로그래밍/19",
+        "pk": 128,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 30,
+            "major": 31,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "GBT/컴퓨터프로그래밍/20",
+        "pk": 129,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 30,
+            "major": 31,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "GBT/컴퓨터프로그래밍/21",
+        "pk": 130,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 30,
+            "major": 31,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "GBT/컴퓨터프로그래밍/22",
+        "pk": 131,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 30,
+            "major": 31,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "GBT/컴퓨터프로그래밍/23",
+        "pk": 132,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 30,
+            "major": 31,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "GBT/컴퓨터프로그래밍/24",
+        "pk": 133,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 30,
+            "major": 31,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "GBT/졸업프로젝트실습(캡스톤디자인)/18",
+        "pk": 134,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 31,
+            "major": 31,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "GBT/졸업프로젝트실습(캡스톤디자인)/19",
+        "pk": 135,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 31,
+            "major": 31,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "GBT/졸업프로젝트실습(캡스톤디자인)/20",
+        "pk": 136,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 31,
+            "major": 31,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "GBT/졸업프로젝트실습(캡스톤디자인)/21",
+        "pk": 137,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 31,
+            "major": 31,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "GBT/졸업프로젝트실습(캡스톤디자인)/22",
+        "pk": 138,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 31,
+            "major": 31,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "GBT/졸업프로젝트실습(캡스톤디자인)/23",
+        "pk": 139,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 31,
+            "major": 31,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "GBT/졸업프로젝트실습(캡스톤디자인)/24",
+        "pk": 140,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 31,
+            "major": 31,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "철학과/논리학/18",
+        "pk": 141,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 32,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "철학과/논리학/19",
+        "pk": 142,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 32,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "철학과/논리학/20",
+        "pk": 143,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 32,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "철학과/논리학/21",
+        "pk": 144,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 32,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "철학과/논리학/22",
+        "pk": 145,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 32,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "철학과/논리학/23",
+        "pk": 146,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 32,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "철학과/논리학/24",
+        "pk": 147,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 32,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "철학과/서양고.중세철학사/18",
+        "pk": 148,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 33,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "철학과/서양고.중세철학사/19",
+        "pk": 149,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 33,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "철학과/서양고.중세철학사/20",
+        "pk": 150,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 33,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "철학과/서양고.중세철학사/21",
+        "pk": 151,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 33,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "철학과/서양고.중세철학사/22",
+        "pk": 152,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 33,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "철학과/서양고.중세철학사/23",
+        "pk": 153,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 33,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "철학과/서양고.중세철학사/24",
+        "pk": 154,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 33,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "철학과/중국고.중세철학사/18",
+        "pk": 155,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 34,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "철학과/중국고.중세철학사/19",
+        "pk": 156,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 34,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "철학과/중국고.중세철학사/20",
+        "pk": 157,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 34,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "철학과/중국고.중세철학사/21",
+        "pk": 158,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 34,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "철학과/중국고.중세철학사/22",
+        "pk": 159,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 34,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "철학과/중국고.중세철학사/23",
+        "pk": 160,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 34,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "철학과/중국고.중세철학사/24",
+        "pk": 161,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 34,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "철학과/철학입문/18",
+        "pk": 162,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 35,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "철학과/철학입문/19",
+        "pk": 163,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 35,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "철학과/철학입문/20",
+        "pk": 164,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 35,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "철학과/철학입문/21",
+        "pk": 165,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 35,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "철학과/철학입문/22",
+        "pk": 166,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 35,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "철학과/철학입문/23",
+        "pk": 167,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 35,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "철학과/철학입문/24",
+        "pk": 168,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 35,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "철학과/(사학과) 한국사입문/동아시아현대사/서양생활문화사/18",
+        "pk": 169,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 36,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "철학과/(사학과) 한국사입문/동아시아현대사/서양생활문화사/19",
+        "pk": 170,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 36,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "철학과/(사학과) 한국사입문/동아시아현대사/서양생활문화사/20",
+        "pk": 171,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 36,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "철학과/(사학과) 한국사입문/동아시아현대사/서양생활문화사/21",
+        "pk": 172,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 36,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "철학과/(사학과) 한국사입문/동아시아현대사/서양생활문화사/22",
+        "pk": 173,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 36,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "철학과/(사학과) 한국사입문/동아시아현대사/서양생활문화사/23",
+        "pk": 174,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 36,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "철학과/(사학과) 한국사입문/동아시아현대사/서양생활문화사/24",
+        "pk": 175,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 36,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "철학과/(언어인지과학과) 언어와인간/세계의언어와문자/18",
+        "pk": 176,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 37,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "철학과/(언어인지과학과) 언어와인간/세계의언어와문자/19",
+        "pk": 177,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 37,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "철학과/(언어인지과학과) 언어와인간/세계의언어와문자/20",
+        "pk": 178,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 37,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "철학과/(언어인지과학과) 언어와인간/세계의언어와문자/21",
+        "pk": 179,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 37,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "철학과/(언어인지과학과) 언어와인간/세계의언어와문자/22",
+        "pk": 180,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 37,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "철학과/(언어인지과학과) 언어와인간/세계의언어와문자/23",
+        "pk": 181,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 37,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "철학과/(언어인지과학과) 언어와인간/세계의언어와문자/24",
+        "pk": 182,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 37,
+            "major": 1,
+            "main_compulsory": true,
+            "sub_compulsory": true,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "컴퓨터·전자시스템공학부/컴퓨터프로그래밍및실습/18",
+        "pk": 183,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 38,
+            "major": 40,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "컴퓨터·전자시스템공학부/컴퓨터프로그래밍및실습/19",
+        "pk": 184,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 38,
+            "major": 40,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "컴퓨터·전자시스템공학부/자료구조/18",
+        "pk": 185,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 39,
+            "major": 40,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "컴퓨터·전자시스템공학부/자료구조/19",
+        "pk": 186,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 39,
+            "major": 40,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "컴퓨터·전자시스템공학부/캡스톤설계및실습/18",
+        "pk": 187,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 40,
+            "major": 40,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "컴퓨터·전자시스템공학부/캡스톤설계및실습/19",
+        "pk": 188,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 40,
+            "major": 40,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "컴퓨터·전자시스템공학부/컴퓨터개론및실습/18",
+        "pk": 189,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 41,
+            "major": 40,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 18
+        }
+    }, 
+    {
+        "_comment": "컴퓨터·전자시스템공학부/컴퓨터개론및실습/19",
+        "pk": 190,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 41,
+            "major": 40,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 19
+        }
+    }, 
+    {
+        "_comment": "컴퓨터공학부/컴퓨터프로그래밍및실습/20",
+        "pk": 191,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 38,
+            "major": 39,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "컴퓨터공학부/컴퓨터프로그래밍및실습/21",
+        "pk": 192,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 38,
+            "major": 39,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "컴퓨터공학부/컴퓨터프로그래밍및실습/22",
+        "pk": 193,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 38,
+            "major": 39,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "컴퓨터공학부/컴퓨터프로그래밍및실습/23",
+        "pk": 194,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 38,
+            "major": 39,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "컴퓨터공학부/컴퓨터프로그래밍및실습/24",
+        "pk": 195,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 38,
+            "major": 39,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "컴퓨터공학부/자료구조/20",
+        "pk": 196,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 39,
+            "major": 39,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "컴퓨터공학부/자료구조/21",
+        "pk": 197,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 39,
+            "major": 39,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "컴퓨터공학부/자료구조/22",
+        "pk": 198,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 39,
+            "major": 39,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "컴퓨터공학부/자료구조/23",
+        "pk": 199,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 39,
+            "major": 39,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "컴퓨터공학부/자료구조/24",
+        "pk": 200,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 39,
+            "major": 39,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 24
+        }
+    }, 
+    {
+        "_comment": "컴퓨터공학부/캡스톤설계및실습/20",
+        "pk": 201,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 40,
+            "major": 39,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 20
+        }
+    }, 
+    {
+        "_comment": "컴퓨터공학부/캡스톤설계및실습/21",
+        "pk": 202,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 40,
+            "major": 39,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 21
+        }
+    }, 
+    {
+        "_comment": "컴퓨터공학부/캡스톤설계및실습/22",
+        "pk": 203,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 40,
+            "major": 39,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 22
+        }
+    }, 
+    {
+        "_comment": "컴퓨터공학부/캡스톤설계및실습/23",
+        "pk": 204,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 40,
+            "major": 39,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 23
+        }
+    }, 
+    {
+        "_comment": "컴퓨터공학부/캡스톤설계및실습/24",
+        "pk": 205,
+        "model": "subject.MajorCompulsory",
+        "fields": {
+            "subject": 40,
+            "major": 39,
+            "main_compulsory": true,
+            "sub_compulsory": false,
+            "class_of": 24
+        }
+    }
+]
