@@ -82,16 +82,19 @@ class CreditView(RetrieveUpdateAPIView):
 
 # 마이페이지 > 수강 과목 -> get, put 확인 필요
 
-class SubjectView(RetrieveUpdateAPIView):
+# 마이페이지 > 수강 과목
+#RetrievAPIView -> APIView로 수정 
+class SubjectView(APIView):
+    # permission_classes = [IsAuthenticated] 인증된 사용자가 뷰에 접근할 수 있도록 한다고 함
     def get(self, request):
         try:
-            major_subject = UserMajorCompulsory.objects.get(user=request.user)
-            major_subeject_serializer = UserMajorCompulsorySerializer(major_subject)
-            major_user_data = [item['subject'] for item in major_subeject_serializer.data]
+            major_subject = UserMajorCompulsory.objects.filter(user=request.user)
+            major_subeject_serializer = UserMajorCompulsorySerializer(major_subject,many = True) #many = True : 여러개의 객체를 시리얼라이즈할 때 사용함
+            major_user_data = [item['subject_name'] for item in major_subeject_serializer.data] #subject -> subject_name으로 수정
             
-            liberal_subject = UserLiberalCompulsory.objects.get(user=request.user)
-            liberal_subject_serializer = UserLiberalCompulsorySerializer(liberal_subject)
-            liberal_user_data = [item['subject'] for item in liberal_subject_serializer.data]
+            liberal_subject = UserLiberalCompulsory.objects.filter(user=request.user)
+            liberal_subject_serializer = UserLiberalCompulsorySerializer(liberal_subject, many = True)
+            liberal_user_data = [item['subject_name'] for item in liberal_subject_serializer.data]
 
             # 여기는 들은 과목, 안 들은 과목 다 보여줘야 하는건가
             response_data = {
@@ -104,10 +107,12 @@ class SubjectView(RetrieveUpdateAPIView):
         
     def put(self, request):
         try:
-            major_subject = UserMajorCompulsory.objects.get(user=request.user)
-            liberal_subject = UserLiberalCompulsory.objects.get(user=request.user)
-            major_subject_serializer = UserMajorCompulsorySerializer(major_subject, data=request.data, partial=True)
-            liberal_subject_serializer = UserLiberalCompulsorySerializer(liberal_subject, data=request.data, partial=True)
+            major_subject = UserMajorCompulsory.objects.filter(user=request.user)
+            liberal_subject = UserLiberalCompulsory.objects.filter(user=request.user)
+
+            major_subject_serializer = UserMajorCompulsorySerializer(major_subject, data=request.data.get('major_subject'), many = True, partial=True)
+            liberal_subject_serializer = UserLiberalCompulsorySerializer(liberal_subject, data=request.data.get('liberal_subject'), many = True,  partial=True)
+            
             if major_subject_serializer.is_valid() and liberal_subject_serializer.is_valid():
                 major_subject_serializer.save()
                 liberal_subject_serializer.save()
