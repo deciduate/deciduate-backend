@@ -31,29 +31,29 @@ class GetResult(APIView):
     def get(self, request):
         try:
             basic = Basic.objects.get(user=request.user)
-            credit = Credit.objects.get(user=request.user)
+            credit = Credit.objects.get_or_create(user=request.user)
             extra = Extra.objects.get(user=request.user)
-            major_subject = MajorCompulsorySubject.objects.filter(user=request.user, status=False)
-            liberal_subject = LiberalCompulsorySubject.objects.filter(user=request.user, status=False)
+            major_subject = UserMajorCompulsory.objects.filter(user=request.user, status=False)
+            liberal_subject = UserLiberalCompulsory.objects.filter(user=request.user, status=False)
         except Basic.DoesNotExist:
             return Response({'detail': '입력된 기본 정보가 없습니다.'}, status=status.HTTP_404_NOT_FOUND)
         except Credit.DoesNotExist:
             return Response({'detail': '입력된 학점 정보가 없습니다.'}, status=status.HTTP_404_NOT_FOUND)
         except Extra.DoesNotExist:
             return Response({'detail': '입력된 추가 정보가 없습니다.'}, status=status.HTTP_404_NOT_FOUND)
-        except MajorCompulsorySubject.DoesNotExist:
+        except UserMajorCompulsory.DoesNotExist:
             return Response({'detail': '입력된 전필 과목 정보가 없습니다.'}, status=status.HTTP_404_NOT_FOUND)
-        except LiberalCompulsorySubject.DoesNotExist:
+        except UserLiberalCompulsory.DoesNotExist:
             return Response({'detai': '입력된 교필 과목 정보가 없습니다.'}, status=status.HTTP_404_NOT_FOUND)
         
         basic_serializer = BasicSerializer(basic)
         credit_serializer = CreditSerializer(credit)
         extra_serializer = ExtraSerializer(extra)
-        major_subject_serializer = MajorSubjectSerializer(major_subject, many=True)
-        liberal_subject_serializer = LiberalSubjectSerializer(liberal_subject, many=True)
+        major_subject_serializer = UserMajorCompulsorySerializer(major_subject, many=True)
+        liberal_subject_serializer = UserLiberalCompulsorySerializer(liberal_subject, many=True)
 
         student_no = basic_serializer.data['student_no']
-        main_major = basic_serializer.data['main_major'] #학과명
+        main_major = basic_serializer.data['main_major_name'] #학과명
 
         requirement_data = major_requirement(main_major)
         result = {}
