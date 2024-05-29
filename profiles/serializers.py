@@ -93,7 +93,7 @@ class ExtraSerializer(serializers.ModelSerializer):
     class Meta:
         model = Extra
         fields = [
-            'id', 'main_test_pass', 'double_test_pass', 'foreign_pass', 'user'
+            'id', 'main_test_pass', 'double_test_pass', 'foreign_certification', 'user'
         ]
 
 class CompletionSerializer(serializers.Serializer):
@@ -110,21 +110,26 @@ class CompletionSerializer(serializers.Serializer):
         extra_data = validated_data.pop('extra')
 
         # Credit 저장
+        credit_data.pop('user', None)
         credit = Credit.objects.create(user=user, **credit_data)
 
         # UserMajorCompulsory 저장
         for subject_name in major_subject_data:
             subject = Subject.objects.get(name=subject_name)
-            major_compulsory = MajorCompulsory.objects.get(subject=subject)
-            UserMajorCompulsory.objects.create(user=user, subject=major_compulsory, status=True)
+            major_compulsories = MajorCompulsory.objects.filter(subject=subject)
+            for major_compulsory in major_compulsories:
+                UserMajorCompulsory.objects.create(user=user, subject=major_compulsory, status=True)
 
         # UserLiberalCompulsory 저장
         for subject_name in liberal_subject_data:
             subject = Subject.objects.get(name=subject_name)
-            liberal_compulsory = LiberalCompulsory.objects.get(subject=subject)
-            UserLiberalCompulsory.objects.create(user=user, subject=liberal_compulsory, status=True)
+            liberal_compulsories = LiberalCompulsory.objects.filter(subject=subject)
+            for liberal_compulsory in liberal_compulsories:
+                UserLiberalCompulsory.objects.create(user=user, subject=liberal_compulsory, status=True)
 
         # Extra 저장
+        extra_data.pop('user', None)
+
         extra = Extra.objects.create(user=user, **extra_data)
 
         return {

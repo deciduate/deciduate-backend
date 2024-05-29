@@ -10,8 +10,6 @@ from .serializers import *
 from users.models import MyUser
 from subject.models import Subject
 
-# user를 어떻게 해야하는지 고민해야함
-
 class BasicView(generics.ListCreateAPIView, generics.UpdateAPIView):
     queryset = Basic.objects.all()
     serializer_class = BasicSerializer
@@ -24,8 +22,8 @@ class CompletionView(generics.GenericAPIView):
         serializer.is_valid(raise_exception=True)
         data = serializer.save()
         return Response(data, status=status.HTTP_201_CREATED)
-
-# 마이페이지 > 내 정보       
+      
+# 마이페이지 > 내 정보 -> get 확인 필요   
 class InfoView(APIView):
     def get(self, request):
 
@@ -76,40 +74,14 @@ class InfoView(APIView):
         }
 
         return Response(Response_data, status=status.HTTP_200_OK)#
-
-
-# 마이페이지 > 상태 3개 필요(미등록, 등록 중, 등록완료)
-# post(미등록), put(등록완료)
-  
-# 만약 null 값이 하나라도 있으면 등록중 -> put을 통해 넣을 수 있음
-# 모두 null 값이라면 미등록 -> put을 통해 넣을 수 있음
-# null 값이 하나라도 없으면 등록완료 -> put을 통해 수정완료
-# -> 모델에서 default 다 없애고, null=True 변경
       
-# 마이페이지 > 취득 학점
+# 마이페이지 > 취득 학점 
 class CreditView(RetrieveUpdateAPIView):
-    def get(self, request):
-        try:
-            credit = Credit.objects.get(user=request.user)
-            serializer = CreditSerializer(credit)
-            # 201: 요청 정상, 요청된 리소스 포함
-            return Response(serializer.data, status=status.HTTP_200_OK)
-        except Credit.DoesNotExist:
-            # 204: 요청 성공, 제공할 내용 없음 => 입력된 내용 없으니, 프론트에 줄 리소스 없다
-            return Response(status=status.HTTP_204_NO_CONTENT)
-    
-    def put(self, request):
-        try:
-            credit = Credit.objects.get(user=request.user)
-            serializer = CreditSerializer(credit, data=request.data, partial=True)
-            if serializer.is_valid():
-                serializer.save()
-                return Response(serializer.data, status=status.HTTP_200_OK)
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-        except Credit.DoesNotExist:
-            return Response({'detail': '입력된 학점이 없습니다.'}, status=status.HTTP_404_NOT_FOUND)
+    queryset = Credit.objects.all()
+    serializer_class = CreditSerializer
 
-# 마이페이지 > 수강 과목
+# 마이페이지 > 수강 과목 -> get, put 확인 필요
+
 class SubjectView(RetrieveUpdateAPIView):
     def get(self, request):
         try:
@@ -147,25 +119,7 @@ class SubjectView(RetrieveUpdateAPIView):
             return Response({"error": "Invalid data"}, status=status.HTTP_400_BAD_REQUEST)
         except (UserMajorCompulsory.DoesNotExist, UserLiberalCompulsory.DoesNotExist):
             return Response({'detail': '수강한 필수과목이 없습니다.'}, status=status.HTTP_404_NOT_FOUND)
-
-
-# 마이페이지 > 졸업시험/논문 | 외국어 인증
-class ExtraView(RetrieveUpdateAPIView):
-    def get(self, request):
-        try:
-            extra = Extra.objects.get(user=request.user)
-            serializer = ExtraSerializer(extra)
-            return Response(serializer.data, status=status.HTTP_200_OK)
-        except Extra.DoesNotExist:
-            return Response(status=status.HTTP_204_NO_CONTENT)
-    
-    def put(self, request):
-        try:
-            extra = Extra.objects.get(user=request.user)
-            serializer = ExtraSerializer(extra, data=request.data, partial=True)
-            if serializer.is_valid():
-                serializer.save()
-                return Response(serializer.data, status=status.HTTP_200_OK)
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-        except Extra.DoesNotExist:
-            return Response({'detail': '입력된 학점이 없습니다.'}, status=status.HTTP_404_NOT_FOUND)
+        
+class ExtraView(generics.ListCreateAPIView, generics.UpdateAPIView):
+    queryset = Extra.objects.all()
+    serializer_class = ExtraSerializer
