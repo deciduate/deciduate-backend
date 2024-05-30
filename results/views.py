@@ -120,13 +120,13 @@ class GetResult(APIView):
         # 시험 통과 여부
         u_main_test_pass = extra_serializer.data['main_test_pass']
         u_double_test_pass = extra_serializer.data['double_test_pass']
-        u_foreign_pass = extra_serializer.data['foreign_pass']
+        u_foreign_certification = extra_serializer.data['foreign_certification']
         
         if u_main_test_pass == False:
             result['main_test_pass'] = False
         if u_double_test_pass == False:
             result['double_test_pass'] = False
-        if u_foreign_pass == "None":
+        if u_foreign_certification == 1:
             result['foreign_certification'] = False
 
         return Response(result, status=status.HTTP_200_OK)
