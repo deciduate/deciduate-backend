@@ -3,7 +3,7 @@ from major.models import *
 
 # Create your models here.
 class Requirement(models.Model):
-    major_id = models.OneToOneField(Major, null=True, on_delete=models.SET_NULL)
+    major_id = models.ForeignKey(Major, null=True, on_delete=models.SET_NULL)
     student_no = models.CharField(max_length=2)
     major_type = models.IntegerField(default=1)
 

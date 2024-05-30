@@ -76,27 +76,48 @@ class SubjectView(APIView):
     # error: invalid data
     def put(self, request, pk):
         try:
-            major_subject = UserMajorCompulsory.objects.filter(user=pk)
-            liberal_subject = UserLiberalCompulsory.objects.filter(user=pk)
+            major_subject_data = request.data.get('major_subject')
+            liberal_subject_data = request.data.get('liberal_subject')
 
-            major_subject_serializer = UserMajorCompulsorySerializer(major_subject, data=request.data.get('major_subject'))
-            liberal_subject_serializer = UserLiberalCompulsorySerializer(liberal_subject, data=request.data.get('liberal_subject'))
+            # 유저 객체 가져오기
+            user = MyUser.objects.get(pk=pk)
+
+            # 입력 데이터 유효성 검사
+            if not major_subject_data or not isinstance(major_subject_data, list):
+                return Response({"error": "Invalid data: 'major_subject' should be a list of subject names."}, status=status.HTTP_400_BAD_REQUEST)
             
-            if major_subject_serializer.is_valid() and liberal_subject_serializer.is_valid():
-                major_subject_serializer.save()
-                liberal_subject_serializer.save()
+            if not liberal_subject_data or not isinstance(liberal_subject_data, list):
+                return Response({"error": "Invalid data: 'liberal_subject' should be a list of subject names."}, status=status.HTTP_400_BAD_REQUEST)
 
-                major_user_data = list(set([item['subject_name'] for item in major_subject_serializer.data]))
-                liberal_user_data = list(set([item['subject_name'] for item in liberal_subject_serializer.data]))
+            # Major subjects 처리
+            UserMajorCompulsory.objects.filter(user=user).delete()
 
-                Response_data = {
-                    'major_subject': major_user_data,
-                    'liberal_subject': liberal_user_data
-                }
-                return Response(Response_data, status=status.HTTP_200_OK)
-            return Response({"error": "Invalid data"}, status=status.HTTP_400_BAD_REQUEST)
-        except (UserMajorCompulsory.DoesNotExist, UserLiberalCompulsory.DoesNotExist):
-            return Response({'detail': '수강한 필수과목이 없습니다.'}, status=status.HTTP_404_NOT_FOUND)
+            for subject_name in major_subject_data:
+                try:
+                    subject = MajorCompulsory.objects.filter(subject__name=subject_name).first()
+                    UserMajorCompulsory.objects.create(user=user, subject=subject)
+                except MajorCompulsory.DoesNotExist:
+                    return Response({"error": f"Invalid data: Major subject '{subject_name}' does not exist."}, status=status.HTTP_400_BAD_REQUEST)
+
+            # Liberal subjects 처리
+            UserLiberalCompulsory.objects.filter(user=user).delete()
+            for subject_name in liberal_subject_data:
+                try:
+                    subject = LiberalCompulsory.objects.filter(subject__name=subject_name).first()
+                    UserLiberalCompulsory.objects.create(user=user, subject=subject)
+                except LiberalCompulsory.DoesNotExist:
+                    return Response({"error": f"Invalid data: Liberal subject '{subject_name}' does not exist."}, status=status.HTTP_400_BAD_REQUEST)
+
+            # 응답 데이터 생성
+            response_data = {
+                'major_subject': major_subject_data,
+                'liberal_subject': liberal_subject_data
+            }
+            return Response(response_data, status=status.HTTP_200_OK)
+        except MyUser.DoesNotExist:
+            return Response({"error": "User not found."}, status=status.HTTP_404_NOT_FOUND)
+        except Exception as e:
+            return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
 
 class ExtraView(generics.ListCreateAPIView, generics.UpdateAPIView):
     queryset = Extra.objects.all()
