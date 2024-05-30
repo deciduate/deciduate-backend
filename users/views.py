@@ -47,6 +47,10 @@ class GoogleCallbackView(View):
             user_info = user_info_response.json()
 
             email = user_info.get('email')
+            # 이메일 도메인 검증
+            if not email.endswith('@hufs.ac.kr'):
+                return JsonResponse({'error': '한국외국어대학교 계정으로 로그인해 주세요'}, status=400)
+            
             user, created = MyUser.objects.get_or_create(email=email)
             if created:
                 user.set_password(None)
@@ -68,25 +72,5 @@ class LogoutView(APIView):
         try:
             logout(request)
             return JsonResponse({'message': 'Logged out successfully'}, status=200)
-        except Exception as e:
-            return JsonResponse({'error': str(e)}, status=400)
-
-class RegisterView(APIView):
-    def post(self, request):
-        try:
-            data = json.loads(request.body)
-            email = data['email']
-            if MyUser.objects.filter(email=email).exists():
-                return JsonResponse({'error': 'Email already exists'}, status=400)
-            
-            user = MyUser.objects.create_user(email=email)
-            user.save()
-            
-            refresh = RefreshToken.for_user(user)
-            return JsonResponse({
-                'access': str(refresh.access_token),
-                'refresh': str(refresh),
-                'email': email
-            }, status=201)
         except Exception as e:
             return JsonResponse({'error': str(e)}, status=400)

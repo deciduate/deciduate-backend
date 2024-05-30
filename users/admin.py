@@ -7,6 +7,7 @@ from django.contrib import admin
 class UserAdmin(admin.ModelAdmin):
 
     list_display = (
+        'id',
         'email',
         'created_at',
         'updated_at',

@@ -4,7 +4,9 @@ from rest_framework.exceptions import ValidationError
 from profiles.models import Basic, Credit, UserMajorCompulsory, UserLiberalCompulsory, Extra
 from major.models import Major
 from subject.models import Subject, MajorCompulsory, LiberalCompulsory
+from users.models import MyUser
 
+# default_user = MyUser.objects.get(id=2)
 
 class BasicSerializer(serializers.ModelSerializer):
     main_major_name = serializers.CharField(source='main_major.name', read_only=True)
@@ -74,6 +76,9 @@ class BasicSerializer(serializers.ModelSerializer):
         
 
 class CreditSerializer(serializers.ModelSerializer):
+    # 사용자 필드를 식별자로 나타내기 위해 PrimaryKeyRelatedField를 사용합니다.
+    # user = serializers.PrimaryKeyRelatedField(queryset=MyUser.objects.all())
+
     class Meta:
         model = Credit
         fields = [
@@ -105,6 +110,7 @@ class ExtraSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'main_test_pass', 'double_test_pass', 'foreign_certification', 'user'
         ]
+        read_only_fields = ['id', 'user']
 
 class CompletionSerializer(serializers.Serializer):
     credit = CreditSerializer()
@@ -114,7 +120,6 @@ class CompletionSerializer(serializers.Serializer):
 
     def create(self, validated_data):
         user = self.context['request'].user
-
         credit_data = validated_data.pop('credit')
         major_subject_data = validated_data.pop('major_subject')
         liberal_subject_data = validated_data.pop('liberal_subject')
@@ -141,6 +146,7 @@ class CompletionSerializer(serializers.Serializer):
             liberal_compulsories = LiberalCompulsory.objects.filter(subject=subject)
             for liberal_compulsory in liberal_compulsories:
                 UserLiberalCompulsory.objects.create(user=user, subject=liberal_compulsory, status=True)
+
 
         # Extra 저장
         extra = Extra.objects.create(user=user, **extra_data)
