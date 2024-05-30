@@ -32,8 +32,6 @@ class BasicSerializer(serializers.ModelSerializer):
         minor_major_name = validated_data.pop('minor_major', None)
 
         user = self.context['request'].user
-        # if not isinstance(user, MyUser):
-        #     user = default_user
 
         if main_major_name:
             try:
@@ -55,14 +53,12 @@ class BasicSerializer(serializers.ModelSerializer):
                 raise ValidationError({"minor_major": "Major with this name does not exist."})
 
         validated_data['user'] = user
-        
+
         return Basic.objects.create(**validated_data)
 
 
     def update(self, instance, validated_data):
         user = self.context['request'].user
-        # if not isinstance(user, MyUser):
-        #     user = default_user
 
         if 'main_major' in validated_data:
             main_major_name = validated_data.pop('main_major')
@@ -123,18 +119,19 @@ class CompletionSerializer(serializers.Serializer):
     extra = ExtraSerializer()
 
     def create(self, validated_data):
+        user = self.context['request'].user
         credit_data = validated_data.pop('credit')
         major_subject_data = validated_data.pop('major_subject')
         liberal_subject_data = validated_data.pop('liberal_subject')
         extra_data = validated_data.pop('extra')
 
         # Credit 저장
-        user = self.context['request'].user
-        # if not isinstance(user, MyUser):
-        #     user = default_user
-
-        # Credit 객체 생성
+        credit_data.pop('user', None)
         credit = Credit.objects.create(**credit_data, user=user)
+
+        # 중복된 과목 제거
+        major_subject_data = list(set(major_subject_data))
+        liberal_subject_data = list(set(liberal_subject_data))
 
         # UserMajorCompulsory 저장
         for subject_name in major_subject_data:
